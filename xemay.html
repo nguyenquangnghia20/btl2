@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thuê xe máy Đà Lạt giá rẻ chỉ 100.000 VNĐ/ngày. Xe đời mới, bảo dưỡng định kỳ, hỗ trợ giao xe tận nơi tại Đà Lạt.">
+    <title>Thuê Xe Máy Đà Lạt | Đà Lạt Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf;
+            --secondary-color: #ff6b6b;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Section */
+        .bike-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://storage.googleapis.com/blogvxr-uploads/2025/03/eac5f7c6-thue-xe-may-da-lat-6335156.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .bike-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .bike-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .bike-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .bike-meta span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        .bike-booking-cta {
+            margin-top: 30px;
+        }
+
+        /* Bike Detail Styles */
+        .bike-detail {
+            padding: 60px 0;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        /* Thông tin xe */
+        .bike-info {
+            margin-bottom: 40px;
+        }
+
+        .bike-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Danh sách xe */
+        .bike-list {
+            margin-bottom: 40px;
+        }
+
+        .bike-card {
+            display: flex;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .bike-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .bike-img {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bike-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .bike-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .bike-card:hover .bike-img img {
+            transform: scale(1.1);
+        }
+
+        .bike-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .bike-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .bike-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .bike-specs span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bike-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .bike-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Dịch vụ bao gồm */
+        .bike-included {
+            margin-bottom: 40px;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .included-icon {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        /* Thư viện ảnh */
+        .bike-gallery {
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 150px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Sidebar */
+        .bike-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .price-summary {
+            margin-top: 20px;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .price-total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+
+        .testimonial-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        /* Related Services */
+        .related-services {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .service-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .service-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .service-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .save-btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .save-btn.saved {
+            color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .bike-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .bike-card {
+                flex-direction: column;
+            }
+            
+            .bike-img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .bike-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .bike-meta {
+                gap: 15px;
+            }
+            
+            .bike-meta span {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .bike-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .bike-sidebar {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../index.html#about">Giới thiệu</a></li>
+                    <li><a href="../index.html#destinations">Điểm đến</a></li>
+                    <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                    <li><a href="../index.html#tours">Đặt Tour</a></li>
+                    <li><a href="../index.html#transportation" class="active">Di chuyển</a></li>
+                    <li><a href="../index.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../index.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="../index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#transportation">Di chuyển</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Thuê Xe Máy Đà Lạt</span>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section cho thuê xe máy -->
+        <section class="bike-hero">
+            <div class="container">
+                <h1>Thuê Xe Máy Đà Lạt</h1>
+                <div class="bike-price">Chỉ từ 100.000 VNĐ/ngày</div>
+                <div class="bike-meta">
+                    <span><i class="fas fa-motorcycle"></i> Xe đời mới</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Giao xe tận nơi</span>
+                    <span><i class="fas fa-shield-alt"></i> Bảo hiểm đầy đủ</span>
+                    <span><i class="fas fa-star"></i> 4.8/5 (256 đánh giá)</span>
+                </div>
+                <div class="bike-booking-cta">
+                    <a href="#booking" class="btn btn-secondary">Đặt Xe Ngay</a>
+                    <a href="#bike-list" class="btn">Xem Danh Sách Xe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nội dung chi tiết thuê xe -->
+        <section class="bike-detail">
+            <div class="container">
+                <div class="detail-content">
+                    <!-- Nội dung chính -->
+                    <div class="bike-content">
+                        <!-- Điểm nổi bật -->
+                        <div class="bike-info">
+                            <h2 class="section-title">Tại Sao Nên Thuê Xe Máy Tại Đà Lạt?</h2>
+                            <p>Thuê xe máy là phương tiện di chuyển lý tưởng khi du lịch Đà Lạt, giúp bạn chủ động khám phá thành phố ngàn hoa theo cách riêng của mình. Với giá thuê chỉ từ 100.000 VNĐ/ngày, bạn có thể tự do di chuyển đến mọi ngóc ngách của Đà Lạt mà không phụ thuộc vào tour hay phương tiện công cộng.</p>
+                            
+                            <div class="bike-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                                    <h3>Tiết Kiệm Thời Gian</h3>
+                                    <p>Chủ động lịch trình, không phải chờ đợi phương tiện công cộng hay theo khung giờ tour.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                    <h3>Tiết Kiệm Chi Phí</h3>
+                                    <p>Giá thuê rẻ, tiết kiệm hơn nhiều so với thuê xe ô tô hoặc taxi di chuyển nhiều điểm.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                    <h3>Khám Phá Tự Do</h3>
+                                    <p>Dễ dàng ghé thăm các điểm đến ít khách du lịch, ngắm cảnh đẹp ven đường.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-camera"></i></div>
+                                    <h3>Check-in Mọi Lúc</h3>
+                                    <p>Dừng chụp ảnh bất cứ nơi đâu bạn thích mà không bị giới hạn thời gian.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Danh sách xe -->
+                        <div class="bike-list" id="bike-list">
+                            <h2 class="section-title">Danh Sách Xe</h2>
+                            
+                            <div class="bike-card">
+                                <div class="bike-img">
+                                    <img src="https://file.hstatic.net/200000712539/article/vision-phien-ban-dat-biet-2_50535c4b893e4e8ba7b3ad147caee55b.jpg" alt="Honda Vision" loading="lazy">
+                                    <div class="bike-badge">Bán chạy</div>
+                                </div>
+                                <div class="bike-content">
+                                    <h3>Honda Vision</h3>
+                                    <div class="bike-specs">
+                                        <span><i class="fas fa-gas-pump"></i> Xăng</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 110cc</span>
+                                        <span><i class="fas fa-user"></i> 2 người</span>
+                                        <span><i class="fas fa-bolt"></i> Tự động</span>
+                                    </div>
+                                    <p>Xe ga tự động dễ sử dụng, tiết kiệm nhiên liệu, phù hợp cho các cặp đôi hoặc nhóm nhỏ di chuyển trong thành phố.</p>
+                                    <div class="bike-price">100.000 VNĐ/ngày</div>
+                                    <div class="bike-actions">
+                                        <a href="#booking" class="btn">Thuê Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bike-card">
+                                <div class="bike-img">
+                                    <img src="https://cdn.chotot.com/G_w0itWG7bhyt1b6vPm330gcU6G4I4TwTM_BOYNoahQ/preset:listing/plain/c35673001fb6da3072c0276a6c9e0062-2855101102635346036.jpg" alt="Yamaha Sirius" loading="lazy">
+                                    <div class="bike-badge">Tiết kiệm</div>
+                                </div>
+                                <div class="bike-content">
+                                    <h3>Yamaha Sirius</h3>
+                                    <div class="bike-specs">
+                                        <span><i class="fas fa-gas-pump"></i> Xăng</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 115cc</span>
+                                        <span><i class="fas fa-user"></i> 2 người</span>
+                                        <span><i class="fas fa-bolt"></i> Số</span>
+                                    </div>
+                                    <p>Xe số bền bỉ, tiết kiệm nhiên liệu, phù hợp với những ai thích cảm giác lái xe số truyền thống.</p>
+                                    <div class="bike-price">90.000 VNĐ/ngày</div>
+                                    <div class="bike-actions">
+                                        <a href="#booking" class="btn">Thuê Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bike-card">
+                                <div class="bike-img">
+                                    <img src="https://sohanews.sohacdn.com/160588918557773824/2024/4/8/anh-man-hinh-2023-12-09-luc-163016-1633-1712536009494-17125360097111485960475.png" alt="Honda Winner X" loading="lazy">
+                                    <div class="bike-badge">Cao cấp</div>
+                                </div>
+                                <div class="bike-content">
+                                    <h3>Honda Winner X</h3>
+                                    <div class="bike-specs">
+                                        <span><i class="fas fa-gas-pump"></i> Xăng</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 150cc</span>
+                                        <span><i class="fas fa-user"></i> 2 người</span>
+                                        <span><i class="fas fa-bolt"></i> Số</span>
+                                    </div>
+                                    <p>Xe côn tay mạnh mẽ, phù hợp với những ai muốn trải nghiệm cảm giác lái xe thể thao hoặc di chuyển đường dài.</p>
+                                    <div class="bike-price">150.000 VNĐ/ngày</div>
+                                    <div class="bike-actions">
+                                        <a href="#booking" class="btn">Thuê Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bike-card">
+                                <div class="bike-img">
+                                    <img src="https://kenh14cdn.com/thumb_w/640/203336854389633024/2024/9/17/honda-sh-350i-1-180931-165829-1726584447331201099425.jpg" alt="Honda SH" loading="lazy">
+                                    <div class="bike-badge">Sang trọng</div>
+                                </div>
+                                <div class="bike-content">
+                                    <h3>Honda SH</h3>
+                                    <div class="bike-specs">
+                                        <span><i class="fas fa-gas-pump"></i> Xăng</span>
+                                        <span><i class="fas fa-tachometer-alt"></i> 125cc</span>
+                                        <span><i class="fas fa-user"></i> 2 người</span>
+                                        <span><i class="fas fa-bolt"></i> Tự động</span>
+                                    </div>
+                                    <p>Xe ga cao cấp, êm ái, tiện nghi, phù hợp với những ai muốn trải nghiệm di chuyển thoải mái nhất.</p>
+                                    <div class="bike-price">200.000 VNĐ/ngày</div>
+                                    <div class="bike-actions">
+                                        <a href="#booking" class="btn">Thuê Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dịch vụ bao gồm -->
+                        <div class="bike-included">
+                            <h2 class="section-title">Dịch Vụ Bao Gồm</h2>
+                            
+                            <div class="included-grid">
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Xe máy đời mới</h4>
+                                            <p>Xe đời mới, bảo dưỡng định kỳ, đảm bảo an toàn</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Bảo hiểm xe</h4>
+                                            <p>Bảo hiểm vật chất xe và tai nạn người ngồi trên xe</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Giao xe tận nơi</h4>
+                                            <p>Giao xe miễn phí tại khách sạn hoặc điểm hẹn trong trung tâm Đà Lạt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Mũ bảo hiểm</h4>
+                                            <p>2 mũ bảo hiểm đạt chuẩn cho mỗi xe</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Hỗ trợ 24/7</h4>
+                                            <p>Hỗ trợ kỹ thuật, cứu hộ xe 24/7 trong suốt thời gian thuê</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Bản đồ du lịch</h4>
+                                            <p>Tặng bản đồ du lịch Đà Lạt và gợi ý lộ trình</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dịch vụ không bao gồm -->
+                        <div class="bike-included">
+                            <h2 class="section-title">Dịch Vụ Không Bao Gồm</h2>
+                            
+                            <div class="included-grid">
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-times"></i></div>
+                                        <div>
+                                            <h4>Xăng xe</h4>
+                                            <p>Khách tự đổ xăng trong quá trình sử dụng</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-times"></i></div>
+                                        <div>
+                                            <h4>Phí cầu đường</h4>
+                                            <p>Phí cầu đường (nếu có) do khách tự chi trả</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-times"></i></div>
+                                        <div>
+                                            <h4>Tiền phạt giao thông</h4>
+                                            <p>Khách tự chịu trách nhiệm nếu vi phạm luật giao thông</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-times"></i></div>
+                                        <div>
+                                            <h4>Hư hỏng xe</h4>
+                                            <p>Khách chịu trách nhiệm nếu gây hư hỏng xe do sử dụng sai cách</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chính sách thuê xe -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-info-circle"></i> Điều Kiện Thuê Xe</h3>
+                            <ul>
+                                <li>Khách từ 18 tuổi trở lên, có giấy phép lái xe máy hợp lệ</li>
+                                <li>Đặt cọc 1.000.000 VNĐ/xe (hoàn trả khi trả xe)</li>
+                                <li>Xuất trình CMND/CCCD hoặc hộ chiếu khi nhận xe</li>
+                                <li>Thời gian thuê tối thiểu 1 ngày (24h)</li>
+                                <li>Trả xe đúng giờ, nếu trả muộn tính phí thêm theo giờ</li>
+                                <li>Không sử dụng xe vào mục đích phi pháp, cờ bạc, đua xe</li>
+                            </ul>
+                        </div>
+
+                        <!-- Lưu ý khi thuê xe -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Lưu Ý Khi Thuê Xe</h3>
+                            <ul>
+                                <li>Kiểm tra xe kỹ lưỡng trước khi nhận (mặt ngoài, phanh, đèn, còi...)</li>
+                                <li>Chụp ảnh toàn bộ xe và biên bản giao nhận để làm bằng chứng</li>
+                                <li>Tuân thủ luật giao thông, đội mũ bảo hiểm khi tham gia giao thông</li>
+                                <li>Không cho người khác mượn xe trong thời gian thuê</li>
+                                <li>Nếu xe hư hỏng hoặc gặp sự cố, liên hệ ngay với chúng tôi để được hỗ trợ</li>
+                                <li>Trả xe với lượng xăng tương đương khi nhận</li>
+                            </ul>
+                        </div>
+
+                        <!-- Thư viện ảnh -->
+                        <div class="bike-gallery">
+                            <h2 class="section-title">Hình Ảnh Xe Máy</h2>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="https://file.hstatic.net/200000712539/article/vision-phien-ban-dat-biet-2_50535c4b893e4e8ba7b3ad147caee55b.jpg" alt="Honda Vision" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://thegioixedien.com.vn/datafiles/img_data/images/product/Hyosung/SiriusHyosung/xe-50cc-sirius-hyosung-3-min.jpg" alt="Yamaha Sirius" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://cafefcdn.com/zoom/700_438/203337114487263232/2022/3/13/photo1647163411550-16471634116151631268118.jpg" alt="Honda Winner X" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://kenh14cdn.com/thumb_w/640/203336854389633024/2024/9/17/honda-sh-350i-1-180931-165829-1726584447331201099425.jpg" alt="Honda SH" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRne9QwAJ-F60H1NdO1My_0vQ84-XZ2lZX0Ww&s" alt="Giao xe tận nơi" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://cdn.prod.website-files.com/60b6da49493ef52d4956679f/60ff8ff525ee753190fb022e_01.jpg" alt="Kiểm tra xe" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar với form đặt xe -->
+                    <aside class="bike-sidebar" id="booking">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-calendar-alt"></i> Đặt Xe</h3>
+                            <form class="booking-form">
+                                <div class="form-group">
+                                    <label for="bike-type">Loại xe</label>
+                                    <select id="bike-type" required>
+                                        <option value="" disabled selected>Chọn loại xe</option>
+                                        <option value="honda_vision">Honda Vision - 100.000 VNĐ/ngày</option>
+                                        <option value="yamaha_sirius">Yamaha Sirius - 90.000 VNĐ/ngày</option>
+                                        <option value="honda_winner">Honda Winner X - 150.000 VNĐ/ngày</option>
+                                        <option value="honda_sh">Honda SH - 200.000 VNĐ/ngày</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pickup-date">Ngày nhận xe</label>
+                                    <input type="date" id="pickup-date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="return-date">Ngày trả xe</label>
+                                    <input type="date" id="return-date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pickup-location">Địa điểm nhận xe</label>
+                                    <select id="pickup-location" required>
+                                        <option value="" disabled selected>Chọn địa điểm</option>
+                                        <option value="hotel">Khách sạn trong trung tâm Đà Lạt</option>
+                                        <option value="airport">Sân bay Liên Khương</option>
+                                        <option value="bus_station">Bến xe Đà Lạt</option>
+                                        <option value="other">Địa chỉ khác (ghi rõ trong ghi chú)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="name">Họ tên</label>
+                                    <input type="text" id="name" placeholder="Nhập họ tên" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Nhập email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="license">Số GPLX</label>
+                                    <input type="text" id="license" placeholder="Nhập số giấy phép lái xe" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="note">Ghi chú</label>
+                                    <textarea id="note" placeholder="Yêu cầu đặc biệt, địa chỉ giao xe chi tiết..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-secondary">Đặt Xe Ngay</button>
+                                
+                                <div class="price-summary">
+                                    <div class="price-row">
+                                        <span>Giá thuê xe</span>
+                                        <span>100.000 VNĐ/ngày</span>
+                                    </div>
+                                    <div class="price-row">
+                                        <span>Số ngày thuê</span>
+                                        <span>1 ngày</span>
+                                    </div>
+                                    <div class="price-row">
+                                        <span>Phí giao xe</span>
+                                        <span>0 VNĐ</span>
+                                    </div>
+                                    <div class="price-row price-total">
+                                        <span>Tổng cộng</span>
+                                        <span>100.000 VNĐ</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-phone-alt"></i> Hỗ Trợ Đặt Xe</h3>
+                            <p>Hotline: <a href="tel:19001868">1900 1868</a> (24/7)</p>
+                            <p>Email: <a href="mailto:rental@dalattravel.vn">rental@dalattravel.vn</a></p>
+                            <p>Zalo: <a href="https://zalo.me/84987654321">0987 654 321</a></p>
+                            <p>Địa chỉ: 123 Trần Hưng Đạo, Phường 1, Đà Lạt</p>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-comment-alt"></i> Đánh Giá</h3>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Lê Thị Hương" class="testimonial-avatar">
+                                    <div>
+                                        <div class="testimonial-author">Lê Thị Hương</div>
+                                        <div class="testimonial-date">20/03/2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Xe Honda Vision mình thuê rất mới và sạch sẽ, chạy êm. Nhân viên giao xe nhiệt tình, hướng dẫn rõ ràng. Giá cả hợp lý, sẽ thuê lại lần sau."</p>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Nguyễn Văn Tú" class="testimonial-avatar">
+                                    <div>
+                                        <div class="testimonial-author">Nguyễn Văn Tú</div>
+                                        <div class="testimonial-date">12/03/2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>"Thuê Winner X đi các điểm quanh Đà Lạt rất tiện. Xe mạnh, phanh tốt. Có chút trục trặc nhỏ nhưng bên hỗ trợ xử lý nhanh. Nói chung là hài lòng."</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dịch vụ liên quan -->
+        <section class="related-services">
+            <div class="container">
+                <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://image.bnews.vn/MediaUpload/Org/2023/08/16/1-20230816105721.jpg" alt="Thuê Xe Đạp Đà Lạt" loading="lazy">
+                            <div class="service-badge">Eco</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 50.000đ/ngày</span>
+                                <span><i class="fas fa-bicycle"></i> Xe đạp</span>
+                            </div>
+                            <h3>Thuê Xe Đạp Đà Lạt</h3>
+                            <p>Trải nghiệm Đà Lạt bằng xe đạp, thân thiện môi trường, phù hợp với những ai yêu thích vận động.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/xedap.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://bizweb.dktcdn.net/100/198/590/files/cho-thue-o-to.jpg?v=1658197788774" alt="Thuê Xe Ô Tô Đà Lạt" loading="lazy">
+                            <div class="service-badge">Tiện nghi</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 800.000đ/ngày</span>
+                                <span><i class="fas fa-car"></i> 4-7 chỗ</span>
+                            </div>
+                            <h3>Thuê Xe Ô Tô Đà Lạt</h3>
+                            <p>Xe đời mới, tài xế nhiều kinh nghiệm, phù hợp cho gia đình hoặc nhóm bạn di chuyển xa.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/xeoto.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Z-6GYQQdnStT7P6NwKusLN-aP8OSMXiJtA&s" alt="Taxi Đà Lạt" loading="lazy">
+                            <div class="service-badge">Tiện lợi</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-taxi"></i> Theo km</span>
+                                <span><i class="fas fa-user"></i> 4-7 chỗ</span>
+                            </div>
+                            <h3>Dịch Vụ Taxi Đà Lạt</h3>
+                            <p>Dịch vụ taxi uy tín, giá cả hợp lý, đưa đón tận nơi tại Đà Lạt và các điểm lân cận.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/dichvutaxi.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin du lịch Đà Lạt uy tín, cung cấp thông tin chính xác và hữu ích cho du khách.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../index.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../index.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                        <li><a href="../index.html#tours">Đặt Tour</a></li>
+                        <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Dịch vụ</h3>
+                    <ul>
+                        <li><a href="../index.html#tours">Tour du lịch</a></li>
+                        <li><a href="../index.html#transportation">Thuê xe du lịch</a></li>
+                        <li><a href="#">Đặt phòng khách sạn</a></li>
+                        <li><a href="#">Hướng dẫn viên</a></li>
+                        <li><a href="#">Đặt bàn nhà hàng</a></li>
+                        <li><a href="#">Vé tham quan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn đặt tour</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatTravel. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Save service
+        const saveBtns = document.querySelectorAll('.save-btn');
+
+        saveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('saved');
+                btn.innerHTML = btn.classList.contains('saved') ? 
+                    '<i class="fas fa-heart"></i> Đã lưu' : '<i class="far fa-heart"></i> Lưu';
+            });
+        });
+
+        // Calculate bike rental price
+        const bikeTypeSelect = document.getElementById('bike-type');
+        const pickupDateInput = document.getElementById('pickup-date');
+        const returnDateInput = document.getElementById('return-date');
+        const priceRows = document.querySelectorAll('.price-row span:last-child');
+        const priceTotal = document.querySelector('.price-total span:last-child');
+
+        const bikePrices = {
+            'honda_vision': 100000,
+            'yamaha_sirius': 90000,
+            'honda_winner': 150000,
+            'honda_sh': 200000
+        };
+
+        function calculatePrice() {
+            const bikeType = bikeTypeSelect.value;
+            if (!bikeType) return;
+            
+            const pickupDate = new Date(pickupDateInput.value);
+            const returnDate = new Date(returnDateInput.value);
+            
+            if (isNaN(pickupDate.getTime())) return;
+            if (isNaN(returnDate.getTime())) return;
+            
+            // Calculate days (minimum 1 day)
+            const diffTime = Math.max(returnDate - pickupDate, 0);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) || 1;
+            
+            const pricePerDay = bikePrices[bikeType];
+            const total = pricePerDay * diffDays;
+            
+            priceRows[0].textContent = formatPrice(pricePerDay) + ' VNĐ/ngày';
+            priceRows[1].textContent = diffDays + ' ngày';
+            priceRows[2].textContent = '0 VNĐ';
+            priceTotal.textContent = formatPrice(total) + ' VNĐ';
+        }
+
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        bikeTypeSelect.addEventListener('change', calculatePrice);
+        pickupDateInput.addEventListener('change', calculatePrice);
+        returnDateInput.addEventListener('change', calculatePrice);
+
+        // Initialize price calculation
+        calculatePrice();
+
+        // Form submission
+        const bookingForm = document.querySelector('.booking-form');
+        
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const bikeType = document.getElementById('bike-type').value;
+            const pickupDate = document.getElementById('pickup-date').value;
+            const returnDate = document.getElementById('return-date').value;
+            const pickupLocation = document.getElementById('pickup-location').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const license = document.getElementById('license').value;
+            const note = document.getElementById('note').value;
+            
+            // Here you would normally send this data to a server
+            // For demo, we'll just show an alert
+            alert(`Cảm ơn ${name} đã đặt xe!\nChúng tôi sẽ liên hệ với bạn qua số ${phone} để xác nhận.`);
+            
+            // Reset form
+            bookingForm.reset();
+            calculatePrice();
+        });
+
+        // Gallery image lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <img src="" alt="">
+                <span class="close">&times;</span>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const lightboxImg = lightbox.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightbox.querySelector('img')) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Set min date for pickup date (today)
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const yyyy = today.getFullYear();
+        const minDate = yyyy + '-' + mm + '-' + dd;
+        
+        document.getElementById('pickup-date').min = minDate;
+        document.getElementById('return-date').min = minDate;
+
+        // Update return date min when pickup date changes
+        pickupDateInput.addEventListener('change', function() {
+            returnDateInput.min = this.value;
+            if (returnDateInput.value < this.value) {
+                returnDateInput.value = this.value;
+            }
+            calculatePrice();
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

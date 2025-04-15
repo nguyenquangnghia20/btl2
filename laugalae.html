@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá Lẩu Gà Lá É Đà Lạt - Món ăn đặc trưng của thành phố ngàn hoa với hương vị độc đáo từ lá é">
+    <title>Lẩu Gà Lá É Đà Lạt | Đặc sản ẩm thực Đà Lạt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://maps.google.com">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf; /* Màu tím đặc trưng Đà Lạt */
+            --secondary-color: #ff6b6b; /* Màu cam nhạt */
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://kalite.vn/wp-content/uploads/2024/12/402598452_7004207222975681_6403554273470642148_n-2.jpg') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* About Dish Section */
+        .about-dish {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .ingredient-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .ingredient-card:hover .ingredient-icon {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .ingredient-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        /* Recipe Section */
+        .recipe {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .recipe-steps {
+            background: var(--light-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            min-width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .step-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Places Section */
+        .places {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .place-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .place-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .place-card:hover .place-img img {
+            transform: scale(1.1);
+        }
+
+        .place-info {
+            padding: 20px;
+        }
+
+        .place-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .place-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .place-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .place-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--white);
+            border: none;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--white);
+        }
+
+        .faq-answer.active {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            line-height: 1.7;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 0 25px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../BTL.html">Trang chủ</a></li>
+                    <li><a href="../BTL.html#about">Giới thiệu</a></li>
+                    <li><a href="../BTL.html#destinations">Điểm đến</a></li>
+                    <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                    <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                    <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    <li><a href="../BTL.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../BTL.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Lẩu Gà Lá É Đà Lạt</h1>
+                <p class="highlight">Đặc sản ẩm thực • Giá từ 150.000 - 300.000đ/phần</p>
+                <p>Món lẩu đặc trưng của Đà Lạt với hương vị thơm ngon từ gà ta và lá é, ăn kèm rau rừng và mì tôm</p>
+                
+                <div class="hero-btns">
+                    <a href="#recipe" class="btn">
+                        <i class="fas fa-utensils"></i> Cách chế biến
+                    </a>
+                    <a href="#places" class="btn">
+                        <i class="fas fa-map-marker-alt"></i> Địa chỉ ngon
+                    </a>
+                    <a href="#gallery" class="btn btn-secondary">
+                        <i class="fas fa-images"></i> Hình ảnh
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Dish Section -->
+        <section class="about-dish" id="about">
+            <div class="container">
+                <h2 class="section-title text-center">Giới thiệu Lẩu Gà Lá É</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Lẩu gà lá é là một trong những món ăn đặc sản nổi tiếng của Đà Lạt, được nhiều du khách yêu thích bởi hương vị thơm ngon đặc trưng từ lá é và thịt gà ta. Đây là món ăn lý tưởng trong tiết trời se lạnh của thành phố ngàn hoa.</p>
+                        <p>Điểm đặc biệt của món lẩu này là nước dùng được nấu từ xương gà hầm kỹ, kết hợp với lá é tạo nên hương vị thơm nồng, đậm đà. Thịt gà được chọn lọc kỹ càng, thường là gà ta thả vườn, thịt chắc và ngọt. Khi ăn, thực khách sẽ nhúng thịt gà vào nồi lẩu đang sôi, sau đó thưởng thức cùng các loại rau rừng đặc trưng của Đà Lạt như cải đắng, cải xoong, rau muống và mì tôm.</p>
+                        <p>Lá é - nguyên liệu chính tạo nên hương vị đặc trưng của món lẩu này - là loại lá có mùi thơm đặc biệt, giúp khử mùi tanh của thịt gà đồng thời tạo nên hương vị khó quên. Món lẩu gà lá é thường được dùng nóng, là lựa chọn hoàn hảo cho những bữa tối ấm cúng giữa tiết trời lạnh của Đà Lạt.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://i-giadinh.vnecdn.net/2022/12/08/Buoc-7-Thanh-pham-7-3595-1670471747.jpg" alt="Lẩu gà lá é Đà Lạt" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section class="ingredients" id="ingredients">
+            <div class="container">
+                <h2 class="section-title text-center">Nguyên liệu chính</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những nguyên liệu tạo nên hương vị đặc trưng của Lẩu Gà Lá É Đà Lạt</p>
+                
+                <div class="ingredients-grid">
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <h3>Gà ta</h3>
+                        <p>Gà ta thả vườn, thịt chắc và ngọt, khoảng 1-1.5kg/con</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Lá é</h3>
+                        <p>Lá é tươi, khoảng 100g, tạo mùi thơm đặc trưng</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-mortar-pestle"></i>
+                        </div>
+                        <h3>Gia vị</h3>
+                        <p>Hành, tỏi, sả, ớt, nước mắm, muối, đường, hạt nêm</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <h3>Rau rừng</h3>
+                        <p>Cải đắng, cải xoong, rau muống, ngò gai, giá đỗ</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <h3>Mì tôm</h3>
+                        <p>Mì tôm hoặc bún tươi để ăn kèm</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Bếp lẩu</h3>
+                        <p>Bếp gas mini hoặc bếp cồn để giữ nóng lẩu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section class="recipe" id="recipe">
+            <div class="container">
+                <h2 class="section-title text-center">Cách làm Lẩu Gà Lá É</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Hướng dẫn chi tiết cách chế biến món Lẩu Gà Lá É tại nhà</p>
+                
+                <div class="recipe-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Sơ chế nguyên liệu</h4>
+                            <p>Gà làm sạch, chặt miếng vừa ăn. Lá é rửa sạch, để ráo. Hành, tỏi, sả băm nhỏ. Rau rừng nhặt sạch, ngâm nước muối loãng.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Ướp gà</h4>
+                            <p>Ướp gà với 1 thìa hạt nêm, 1/2 thìa muối, 1 thìa đường, 1 thìa nước mắm, hành tỏi băm, 1/2 thìa tiêu. Trộn đều và ướp ít nhất 30 phút.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Nấu nước dùng</h4>
+                            <p>Xương gà luộc sơ, rửa sạch. Cho vào nồi 2 lít nước, đun sôi rồi hạ lửa nhỏ hầm trong 1 tiếng. Vớt bọt thường xuyên để nước dùng trong.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Xào gà</h4>
+                            <p>Phi thơm hành tỏi, cho gà vào xào săn. Khi gà chín tái thì cho vào nồi nước dùng.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Hoàn thiện nồi lẩu</h4>
+                            <p>Khi nước sôi lại, cho lá é vào, nêm nếm lại vừa ăn. Đun thêm 5 phút thì tắt bếp.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Trình bày</h4>
+                            <p>Cho lẩu vào nồi lẩu điện, bày rau sống và mì tôm ra đĩa riêng. Khi ăn, nhúng thịt gà và rau vào nồi lẩu nóng, chấm với nước mắm pha tỏi ớt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places Section -->
+        <section class="places" id="places">
+            <div class="container">
+                <h2 class="section-title text-center">Địa chỉ ăn ngon</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những quán lẩu gà lá é ngon nhất Đà Lạt được người dân và du khách yêu thích</p>
+                
+                <div class="places-grid">
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://cachnau.vn/wp-content/uploads/2021/12/cach-nau-lau-ga-la-e.jpg" alt="Quán Lẩu Gà Lá É Nhà Cổ" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Lẩu Gà Lá É Nhà Cổ</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 12 Khu Hòa Bình</span>
+                                <span><i class="fas fa-clock"></i> 10:00 - 22:00</span>
+                            </div>
+                            <p>Quán nổi tiếng với nước lẩu thơm ngon từ lá é, gà ta thả vườn thịt chắc. Giá từ 200.000đ - 300.000đ/phần 2-3 người.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://beptruong.edu.vn/wp-content/uploads/2021/03/cach-lam-lau-ga-la-e.jpg" alt="Quán Lẩu Gà Lá É Đồi Thông" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Lẩu Gà Lá É Đồi Thông</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 1 Đường Hồ Xuân Hương</span>
+                                <span><i class="fas fa-clock"></i> 11:00 - 23:00</span>
+                            </div>
+                            <p>Quán view đẹp nhìn ra hồ Xuân Hương, nước lẩu đậm đà, rau rừng tươi ngon. Giá từ 250.000đ - 350.000đ/phần 2-3 người.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://bizweb.dktcdn.net/thumb/grande/100/400/734/products/lauga-a75d06a9-21ce-486a-9728-29ea0ced05c0.png?v=1702608517647" alt="Quán Lẩu Gà Lá É Gia Truyền" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Lẩu Gà Lá É Gia Truyền</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 33 Nguyễn Văn Trỗi</span>
+                                <span><i class="fas fa-clock"></i> 10:00 - 22:00</span>
+                            </div>
+                            <p>Quán gia truyền hơn 20 năm, nước lẩu thơm nức mũi lá é, gà thả vườn dai ngon. Giá từ 180.000đ - 280.000đ/phần 2-3 người.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title text-center">Thư viện ảnh</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những hình ảnh đẹp về món Lẩu Gà Lá É Đà Lạt</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/08/14/lau-ga-la-e-da-lat-1-0909.jpg" alt="Lẩu gà lá é Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.tgdd.vn/Files/2020/04/29/1252703/nghi-le-tro-tai-chieu-dai-ca-gia-dinh-voi-mon-lau-ga-la-e-chuan-vi-da-lat-202203051335514963.jpg" alt="Lẩu gà lá é trình bày" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://vietnettour.com/wp-content/uploads/lau-ga-la-e-da-lat-1.jpg" alt="Quán lẩu gà lá é" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.ytimg.com/vi/yqSKaIwIIoY/maxresdefault.jpg" alt="Lẩu gà lá é đặc sản" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.xanhsm.com/2025/02/feb16aa1-lau-ga-la-e-binh-thanh-1.jpg" alt="Lẩu gà lá é Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://mms.img.susercontent.com/vn-11134513-7r98o-lsvcux0j7pok69@resize_ss1242x600!@crop_w1242_h600_cT" alt="Lẩu gà lá é ngon" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title text-center">Câu hỏi thường gặp</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Lẩu gà lá é có gì đặc biệt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lẩu gà lá é có hương vị thơm ngon đặc trưng từ lá é, kết hợp với thịt gà ta dai ngọt. Nước lẩu trong, thơm mùi lá é, ăn kèm rau rừng Đà Lạt tạo nên trải nghiệm ẩm thực độc đáo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Thời điểm nào ăn lẩu gà lá é ngon nhất?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lẩu gà lá é thích hợp nhất vào buổi tối, đặc biệt trong tiết trời lạnh của Đà Lạt. Các quán thường phục vụ từ 10 giờ sáng đến 10 giờ tối hàng ngày.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Giá lẩu gà lá é khoảng bao nhiêu?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Giá dao động từ 150.000 - 350.000đ/phần tùy quán, thường đủ cho 2-3 người ăn. Một số quán cao cấp có thể có giá cao hơn.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Lá é có thể thay thế bằng lá gì?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lá é có hương vị đặc trưng khó thay thế. Nếu không có lá é, có thể dùng lá chanh hoặc sả nhưng hương vị sẽ khác. Tốt nhất nên tìm mua lá é tươi hoặc khô tại các chợ Đà Lạt.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ăn lẩu gà lá é có tốt cho sức khỏe không?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Lẩu gà lá é cung cấp protein từ thịt gà, chất xơ từ rau. Lá é có tác dụng giải cảm, tốt cho tiêu hóa. Tuy nhiên, người có tiền sử mỡ máu cao nên ăn vừa phải, hạn chế nước lẩu quá béo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Đăng ký nhận tin</h2>
+                <p>Nhận công thức nấu ăn và thông tin ẩm thực Đà Lạt hấp dẫn qua email</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin về Đà Lạt uy tín, giới thiệu các món ngon và địa chỉ ăn uống chất lượng.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../BTL.html">Trang chủ</a></li>
+                        <li><a href="../BTL.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../BTL.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                        <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                        <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Món ngon Đà Lạt</h3>
+                    <ul>
+                        <li><a href="#">Bánh ướt lòng gà</a></li>
+                        <li><a href="#">Bánh căn</a></li>
+                        <li><a href="#">Bánh tráng nướng</a></li>
+                        <li><a href="#">Kem bơ</a></li>
+                        <li><a href="#">Dâu tây</a></li>
+                        <li><a href="#">Atiso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatFood. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá Bánh Tráng Nướng Đà Lạt - Món ăn đường phố đặc trưng của thành phố ngàn hoa với hương vị độc đáo">
+    <title>Bánh Tráng Nướng Đà Lạt | Đặc sản ẩm thực đường phố</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://maps.google.com">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf; /* Màu tím đặc trưng Đà Lạt */
+            --secondary-color: #ff6b6b; /* Màu cam nhạt */
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://timtour.vn/files/images/AnGiNgon/banh-trang-nuong-da-lat-1.jpg') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* About Dish Section */
+        .about-dish {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .ingredient-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .ingredient-card:hover .ingredient-icon {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .ingredient-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        /* Recipe Section */
+        .recipe {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .recipe-steps {
+            background: var(--light-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            min-width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .step-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Places Section */
+        .places {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .place-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .place-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .place-card:hover .place-img img {
+            transform: scale(1.1);
+        }
+
+        .place-info {
+            padding: 20px;
+        }
+
+        .place-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .place-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .place-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .place-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--white);
+            border: none;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--white);
+        }
+
+        .faq-answer.active {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            line-height: 1.7;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 0 25px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../BTL.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../BTL.html">Trang chủ</a></li>
+                    <li><a href="../BTL.html#about">Giới thiệu</a></li>
+                    <li><a href="../BTL.html#destinations">Điểm đến</a></li>
+                    <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                    <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                    <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    <li><a href="../BTL.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../BTL.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Bánh Tráng Nướng Đà Lạt</h1>
+                <p class="highlight">Đặc sản đường phố • Giá từ 15.000 - 35.000đ/cái</p>
+                <p>Món ăn vặt đặc trưng của Đà Lạt với bánh tráng giòn thơm, phủ đầy nhân thập cẩm hấp dẫn</p>
+                
+                <div class="hero-btns">
+                    <a href="#recipe" class="btn">
+                        <i class="fas fa-utensils"></i> Cách chế biến
+                    </a>
+                    <a href="#places" class="btn">
+                        <i class="fas fa-map-marker-alt"></i> Địa chỉ ngon
+                    </a>
+                    <a href="#gallery" class="btn btn-secondary">
+                        <i class="fas fa-images"></i> Hình ảnh
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Dish Section -->
+        <section class="about-dish" id="about">
+            <div class="container">
+                <h2 class="section-title text-center">Giới thiệu Bánh Tráng Nướng</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Bánh tráng nướng, hay còn gọi là "pizza Việt Nam", là một trong những món ăn vặt đường phố nổi tiếng nhất Đà Lạt. Khác với phiên bản ở các thành phố khác, bánh tráng nướng Đà Lạt có nét đặc trưng riêng từ cách chế biến đến hương vị.</p>
+                        <p>Bánh được làm từ bánh tráng phơi sương loại dày, nướng giòn trên than hồng, sau đó phủ lên một lớp trứng gà đánh tan cùng hành lá, mỡ hành, tóp mỡ, xúc xích, thịt bằm, phô mai và các loại gia vị đặc trưng. Khi ăn, bánh có độ giòn tan của bánh tráng, vị béo ngậy của trứng và phô mai, vị mặn ngọt của các loại nhân, tạo nên một tổng thể hài hòa khó cưỡng.</p>
+                        <p>Điểm đặc biệt của bánh tráng nướng Đà Lạt là cách thưởng thức - thường được bán vào buổi chiều tối, là món ăn lý tưởng trong tiết trời se lạnh của Đà Lạt. Du khách có thể dễ dàng tìm thấy các quán bánh tráng nướng ở khắp các con phố, đặc biệt là khu vực quanh Hồ Xuân Hương và chợ đêm Đà Lạt.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://vietanhsongngu.com/uploads/images/post/banh-trang-nuong-da-lat.jpg" alt="Bánh tráng nướng Đà Lạt" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section class="ingredients" id="ingredients">
+            <div class="container">
+                <h2 class="section-title text-center">Nguyên liệu chính</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những nguyên liệu tạo nên hương vị đặc trưng của Bánh Tráng Nướng Đà Lạt</p>
+                
+                <div class="ingredients-grid">
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <h3>Bánh tráng</h3>
+                        <p>Bánh tráng phơi sương loại dày, đường kính khoảng 25-30cm</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <h3>Trứng gà</h3>
+                        <p>Trứng gà tươi, đánh tan với hành lá và gia vị</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-cheese"></i>
+                        </div>
+                        <h3>Phô mai</h3>
+                        <p>Phô mai Mozzarella hoặc phô mai con bò cười</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-bacon"></i>
+                        </div>
+                        <h3>Tóp mỡ</h3>
+                        <p>Tóp mỡ giòn, thơm ngậy</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <h3>Xúc xích</h3>
+                        <p>Xúc xích heo hoặc xúc xích Đức thái lát</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Than củi</h3>
+                        <p>Than củi nướng giúp bánh chín đều và có mùi thơm đặc trưng</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section class="recipe" id="recipe">
+            <div class="container">
+                <h2 class="section-title text-center">Cách làm Bánh Tráng Nướng</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Hướng dẫn chi tiết cách chế biến món Bánh Tráng Nướng Đà Lạt tại nhà</p>
+                
+                <div class="recipe-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Chuẩn bị nguyên liệu</h4>
+                            <p>Chuẩn bị bánh tráng phơi sương, trứng gà, hành lá thái nhỏ, tóp mỡ, xúc xích thái lát, phô mai bào, ruốc, sốt mayonnaise, tương ớt, bơ, mỡ hành.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Làm nóng bánh tráng</h4>
+                            <p>Đặt bánh tráng lên vỉ nướng than hoa, nướng sơ qua cho bánh hơi cong lại. Lật mặt và quét một lớp mỏng bơ hoặc dầu ăn lên bề mặt bánh.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Đổ trứng</h4>
+                            <p>Đập 1 quả trứng gà vào bát, thêm hành lá, chút muối, tiêu, đánh tan. Đổ hỗn hợp trứng lên mặt bánh tráng đang nóng, dàn đều.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Thêm nhân</h4>
+                            <p>Rắc tóp mỡ, xúc xích, ruốc lên mặt trứng. Tiếp theo rắc phô mai bào lên trên cùng. Có thể thêm pate, thịt bằm tùy sở thích.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Nướng bánh</h4>
+                            <p>Nướng bánh trên than hồng đến khi trứng chín, phô mai tan chảy. Thỉnh thoảng xoay bánh để chín đều. Khi bánh gần chín, rưới mỡ hành lên trên.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Hoàn thiện</h4>
+                            <p>Khi bánh chín vàng, rưới sốt mayonnaise và tương ớt lên mặt theo hình zic zac. Dùng kéo cắt bánh thành 4-6 miếng nhỏ, gấp lại và thưởng thức khi còn nóng.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places Section -->
+        <section class="places" id="places">
+            <div class="container">
+                <h2 class="section-title text-center">Địa chỉ ăn ngon</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những quán bánh tráng nướng ngon nhất Đà Lạt được người dân và du khách yêu thích</p>
+                
+                <div class="places-grid">
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://vcdn1-dulich.vnecdn.net/2019/08/01/ba-nh-tra-ng-nu-o-ng-da-la-t-v-5455-3239-1564656793.png?w=460&h=0&q=100&dpr=2&fit=crop&s=mjHvZqNbe2UHWMaMLptZXw" alt="Quán Bánh Tráng Nướng Bà Thìn" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Bánh Tráng Nướng Bà Thìn</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 26 Nguyễn Văn Trỗi</span>
+                                <span><i class="fas fa-clock"></i> 14:00 - 22:00</span>
+                            </div>
+                            <p>Quán nổi tiếng nhất Đà Lạt với bánh tráng nướng thập cẩm đầy ắp nhân. Giá từ 20.000đ - 35.000đ/cái tùy loại nhân.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://statics.vinpearl.com/banh-trang-nuong-da-lat-5_1690465753.jpg" alt="Quán Bánh Tráng Nướng Chợ Đêm" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Bánh Tráng Nướng Chợ Đêm</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Khu chợ đêm Đà Lạt</span>
+                                <span><i class="fas fa-clock"></i> 18:00 - 23:00</span>
+                            </div>
+                            <p>Nằm trong khu chợ đêm sầm uất, quán có nhiều loại nhân độc đáo như trứng cá hồi, bò Mỹ. Giá từ 25.000đ - 40.000đ/cái.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgAN-lpf2KX8rMYtH-rVELBSnpKt8sXwNnDw&s" alt="Quán Bánh Tráng Nướng Cô Liên" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Bánh Tráng Nướng Cô Liên</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> 11 Tăng Bạt Hổ</span>
+                                <span><i class="fas fa-clock"></i> 15:00 - 22:00</span>
+                            </div>
+                            <p>Quán nhỏ nhưng đông khách nhờ bánh giòn tan, nhân nhiều.Đặc biết có mắm ruốc. Giá từ 15.000đ - 30.000đ/cái.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title text-center">Thư viện ảnh</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những hình ảnh đẹp về món Bánh Tráng Nướng Đà Lạt</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://bestour.com.vn/uploads/Banh-trang-nuong-Da-Lat.bestour2.jpg" alt="Bánh tráng nướng Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://img.mservice.com.vn/common/u/2e02fb5fe4f64fb55bc713540643c6f8eae702d101cea8c59afc49cfc505fc37/436b7188-24d3-4895-a467-c985cf0cc1a9xwhnq_i3.jpeg" alt="Bánh tráng nướng trình bày" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://www.gurutto-vietnam.com/common/image2.php?1=1&h=350&f=%2Fdb%5Fimg%2Fcl%5Fimg%2F5788%2Fmain%5Fimg%5F20231215162230502%2Ejpg" alt="Quán bánh tráng nướng" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://dalattrongtoi.com/media/images/uploaded/2/2015_10_27/post/banh-trang-nuong-da-lat.jpg" alt="Bánh tráng nướng đặc sản" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://timtour.vn/files/images/AnGiNgon/banh-trang-nuong-nhu-mot-mieng-pizza-thu-nho-3.jpg" alt="Bánh tráng nướng Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://bestour.com.vn/uploads/Banh-trang-nuong-Da-Lat.bestour.jpg" alt="Bánh tráng nướng ngon" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title text-center">Câu hỏi thường gặp</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bánh tráng nướng Đà Lạt có gì khác biệt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bánh tráng nướng Đà Lạt thường dùng bánh tráng phơi sương dày hơn, nhân nhiều và đa dạng hơn, đặc biệt là có thêm phô mai và mỡ hành. Cách nướng trên than hồng cũng tạo hương vị đặc trưng khó quên.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Giờ nào ăn bánh tráng nướng ngon nhất?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bánh tráng nướng là món ăn chiều tối nên thời điểm lý tưởng nhất là từ 16-20 giờ khi bánh mới làm còn nóng giòn. Các quán thường bán từ 14 giờ đến 22 giờ hàng ngày.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Giá bánh tráng nướng khoảng bao nhiêu?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Giá dao động từ 15.000 - 35.000đ/cái tùy quán và loại nhân. Một số quán có bán phiên bản cao cấp với nhân đặc biệt như trứng cá hồi, bò Mỹ thì giá có thể lên đến 50.000-70.000đ/cái.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bánh tráng nướng có thể để lâu được không?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bánh tráng nướng ăn ngon nhất khi vừa nướng xong còn nóng giòn. Nếu muốn mang về, bạn có thể yêu cầu quán không cắt bánh và hâm nóng lại bằng lò nướng hoặc chảo chống dính trước khi ăn.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ăn bánh tráng nướng có tốt cho sức khỏe không?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bánh tráng nướng cung cấp tinh bột, protein từ trứng và thịt. Tuy nhiên, món này có thể nhiều dầu mỡ và calo nên người có tiền sử mỡ máu cao hoặc đang ăn kiêng nên ăn vừa phải. Có thể yêu cầu ít sốt mayonnaise và tóp mỡ khi mua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Đăng ký nhận tin</h2>
+                <p>Nhận công thức nấu ăn và thông tin ẩm thực Đà Lạt hấp dẫn qua email</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin về Đà Lạt uy tín, giới thiệu các món ngon và địa chỉ ăn uống chất lượng.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../BTL.html">Trang chủ</a></li>
+                        <li><a href="../BTL.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../BTL.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                        <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                        <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Món ngon Đà Lạt</h3>
+                    <ul>
+                        <li><a href="#">Bánh ướt lòng gà</a></li>
+                        <li><a href="#">Lẩu gà lá é</a></li>
+                        <li><a href="#">Bánh căn</a></li>
+                        <li><a href="#">Kem bơ</a></li>
+                        <li><a href="#">Dâu tây</a></li>
+                        <li><a href="#">Atiso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatFood. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

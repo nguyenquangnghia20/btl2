@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chợ Đà Lạt - Trung tâm mua sắm sầm uất với đủ các loại đặc sản, đồ lưu niệm và hoa tươi của thành phố ngàn hoa.">
+    <title>Chợ Đà Lạt | Đà Lạt Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf;
+            --secondary-color: #ff6b6b;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Destination Detail Styles - Custom for Chợ Đà Lạt */
+        .market-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.vietnambooking.com/wp-content/uploads/2019/04/Cho-dem-da-lat.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .market-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .market-hero .hero-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .destination-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .destination-meta span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Market Content Layout */
+        .market-content {
+            padding: 60px 0;
+        }
+
+        .market-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .market-intro-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .market-intro-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .market-intro-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .market-intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .market-intro-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Market Sections */
+        .market-section {
+            margin-bottom: 50px;
+        }
+
+        .market-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .market-section h3 i {
+            color: var(--secondary-color);
+        }
+
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .market-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .market-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .market-item-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .market-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .market-item:hover .market-item-img img {
+            transform: scale(1.1);
+        }
+
+        .market-item-content {
+            padding: 20px;
+        }
+
+        .market-item-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .market-item-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .market-item-price {
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Food Court Section */
+        .food-court {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .food-court h3 {
+            margin-bottom: 30px;
+        }
+
+        .food-stalls {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .food-stall {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            background: var(--light-color);
+            transition: all 0.3s ease;
+        }
+
+        .food-stall:hover {
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .food-stall-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .food-stall-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .food-stall-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Map & Info Section */
+        .map-info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .market-info-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .market-info-card h3 {
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item p, .info-item ul {
+            margin-left: 30px;
+            color: var(--gray);
+        }
+
+        .info-item ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .info-item ul li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .tip-card {
+            background: var(--light-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .tip-card:hover h4,
+        .tip-card:hover p {
+            color: var(--white);
+        }
+
+        .tip-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Related Destinations */
+        .related-destinations {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .destination-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .destination-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .distance-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .destination-card:hover .destination-img img {
+            transform: scale(1.1);
+        }
+
+        .destination-info {
+            padding: 20px;
+        }
+
+        .destination-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .destination-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            padding: 0;
+            backdrop-filter: none;
+        }
+
+        .destination-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .destination-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .destination-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .save-btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .save-btn.saved {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .market-intro {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-info-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .market-intro-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .market-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .destination-meta {
+                gap: 15px;
+            }
+            
+            .destination-meta span {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .market-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .food-stalls {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../index.html#about">Giới thiệu</a></li>
+                    <li><a href="../index.html#destinations" class="active">Điểm đến</a></li>
+                    <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                    <li><a href="../index.html#tours">Đặt Tour</a></li>
+                    <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    <li><a href="../index.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../index.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="../index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#destinations">Điểm đến</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Chợ Đà Lạt</span>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="market-hero">
+            <div class="container">
+                <h1>Chợ Đà Lạt</h1>
+                <p class="hero-text">Trung tâm mua sắm sầm uất với đủ các loại đặc sản, đồ lưu niệm và hoa tươi của thành phố ngàn hoa</p>
+                <div class="destination-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Số 1 Nguyễn Thị Minh Khai, Phường 1</span>
+                    <span><i class="fas fa-clock"></i> 7:00 - 22:00 hàng ngày</span>
+                    <span><i class="fas fa-money-bill-wave"></i> Miễn phí vào cửa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Content -->
+        <section class="market-content">
+            <div class="container">
+                <!-- Giới thiệu -->
+                <div class="market-intro">
+                    <div class="market-intro-text">
+                        <h2>Chợ Đà Lạt - Thiên đường mua sắm</h2>
+                        <p>Chợ Đà Lạt là một trong những điểm đến không thể bỏ qua khi du lịch Đà Lạt. Nằm ngay trung tâm thành phố, chợ là nơi tập trung đầy đủ các loại đặc sản, đồ lưu niệm, quần áo, phụ kiện và đặc biệt là các loại hoa tươi, rau củ quả tươi ngon của Đà Lạt.</p>
+                        <p>Chợ được xây dựng từ năm 1929 và đã trải qua nhiều lần trùng tu, nâng cấp. Hiện nay, chợ Đà Lạt là một tổ hợp gồm khu chợ truyền thống, khu ẩm thực và khu mua sắm hiện đại với đầy đủ tiện nghi.</p>
+                        <p>Đến với chợ Đà Lạt, du khách không chỉ được mua sắm mà còn có thể thưởng thức những món ăn ngon, đặc sản của vùng đất cao nguyên này.</p>
+                    </div>
+                    <div class="market-intro-image">
+                        <img src="https://ik.imagekit.io/tvlk/blog/2023/01/cho-dem-da-lat-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Chợ Đà Lạt nhìn từ bên ngoài" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Khu vực mua sắm -->
+                <div class="market-section">
+                    <h3><i class="fas fa-shopping-bag"></i> Khu vực mua sắm</h3>
+                    <div class="market-grid">
+                        <div class="market-item">
+                            <div class="market-item-img">
+                                <img src="https://ticotravel.com.vn/wp-content/uploads/2022/06/dac-san-da-lat-3.jpg" alt="Khu bán đặc sản" loading="lazy">
+                            </div>
+                            <div class="market-item-content">
+                                <h4>Đặc sản Đà Lạt</h4>
+                                <p>Mứt, trà, rượu vang, nông sản sấy khô và nhiều đặc sản khác của Đà Lạt</p>
+                                <div class="market-item-price">Giá từ 50.000đ - 300.000đ</div>
+                                <a href="#" class="btn">Xem vị trí</a>
+                            </div>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="market-item-img">
+                                <img src="https://letsflytravel.vn/wp-content/uploads/2024/10/shop-qua-luu-niem-tai-nha-trang-5.webp" alt="Khu bán đồ lưu niệm" loading="lazy">
+                            </div>
+                            <div class="market-item-content">
+                                <h4>Đồ lưu niệm</h4>
+                                <p>Quà tặng, đồ thủ công mỹ nghệ, trang sức và các sản phẩm địa phương</p>
+                                <div class="market-item-price">Giá từ 30.000đ - 500.000đ</div>
+                                <a href="#" class="btn">Xem vị trí</a>
+                            </div>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="market-item-img">
+                                <img src="https://www.dalatcenter.com.vn/images/gallery/quan-ao/DRN_9556.jpg" alt="Khu bán quần áo" loading="lazy">
+                            </div>
+                            <div class="market-item-content">
+                                <h4>Quần áo & Phụ kiện</h4>
+                                <p>Áo len, áo khoác, khăn choàng và các phụ kiện giữ ấm phù hợp với thời tiết Đà Lạt</p>
+                                <div class="market-item-price">Giá từ 100.000đ - 1.000.000đ</div>
+                                <a href="#" class="btn">Xem vị trí</a>
+                            </div>
+                        </div>
+                        
+                        <div class="market-item">
+                            <div class="market-item-img">
+                                <img src="https://dalat.net.vn/images/uploads/shop-hoa-tuoi-da-lat-2.jpg" alt="Khu bán hoa tươi" loading="lazy">
+                            </div>
+                            <div class="market-item-content">
+                                <h4>Hoa tươi Đà Lạt</h4>
+                                <p>Hoa hồng, cẩm tú cầu, ly ly, cúc và nhiều loại hoa tươi khác của Đà Lạt</p>
+                                <div class="market-item-price">Giá từ 20.000đ - 200.000đ/bó</div>
+                                <a href="#" class="btn">Xem vị trí</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Khu ẩm thực -->
+                <div class="food-court">
+                    <h3><i class="fas fa-utensils"></i> Khu ẩm thực chợ đêm</h3>
+                    <p>Chợ đêm Đà Lạt là thiên đường ẩm thực với hàng chục gian hàng phục vụ các món ngon đặc trưng của Đà Lạt và nhiều vùng miền khác. Khu chợ đêm hoạt động từ 17:00 đến 23:00 hàng ngày.</p>
+                    
+                    <div class="food-stalls">
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Bánh căn</h4>
+                                <p>Món bánh đặc trưng của Đà Lạt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-egg"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Bánh tráng nướng</h4>
+                                <p>Đặc sản đường phố Đà Lạt</p>
+                            </div>
+                        </div>
+                        
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Kem bơ</h4>
+                                <p>Món tráng miệng nổi tiếng</p>
+                            </div>
+                        </div>
+                        
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-hotdog"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Xúc xích nướng</h4>
+                                <p>Xúc xích Đà Lạt thơm ngon</p>
+                            </div>
+                        </div>
+                        
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Sữa đậu nành nóng</h4>
+                                <p>Giữ ấm trong tiết trời lạnh</p>
+                            </div>
+                        </div>
+                        
+                        <div class="food-stall">
+                            <div class="food-stall-icon">
+                                <i class="fas fa-cheese"></i>
+                            </div>
+                            <div class="food-stall-info">
+                                <h4>Lẩu bò</h4>
+                                <p>Lẩu bò Đà Lạt đậm đà</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bản đồ và thông tin -->
+                <div class="map-info-section">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.715811983505!2d108.4375203153316!3d11.9408659917985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317112d959f88991%3A0x9dd3a8e7a0f7a4e0!2zSOG7kyBYdcOibiBIxrDGoW5n!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="market-info-card">
+                        <h3><i class="fas fa-info-circle"></i> Thông tin cần biết</h3>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-clock"></i> Giờ mở cửa</h4>
+                            <p>Chợ ngày: 7:00 - 18:00 hàng ngày</p>
+                            <p>Chợ đêm: 17:00 - 23:00 hàng ngày</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-map-marked-alt"></i> Vị trí</h4>
+                            <p>Số 1 Nguyễn Thị Minh Khai, Phường 1, Thành phố Đà Lạt</p>
+                            <p>Nằm ngay trung tâm thành phố, gần Hồ Xuân Hương</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <h4><i class="fas fa-lightbulb"></i> Mẹo khi đi chợ</h4>
+                            <ul>
+                                <li>Mặc ấm vì chợ đêm thường lạnh</li>
+                                <li>Mang theo tiền mặt vì nhiều quầy không chấp nhận thẻ</li>
+                                <li>Mặc cả khi mua hàng, đặc biệt ở các quầy bán đồ lưu niệm</li>
+                                <li>Đến sớm để tránh đông đúc vào buổi tối</li>
+                                <li>Thử nhiều món ăn nhỏ thay vì no một món</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lời khuyên -->
+                <div class="tips-section">
+                    <h3><i class="fas fa-lightbulb"></i> Lời khuyên khi tham quan</h3>
+                    <p>Để có trải nghiệm tốt nhất khi tham quan chợ Đà Lạt, du khách nên lưu ý những điều sau:</p>
+                    
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4><i class="fas fa-wallet"></i> Giá cả</h4>
+                            <p>Nên mặc cả khi mua hàng, giá ban đầu thường cao hơn 20-30% so với giá thực tế.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4><i class="fas fa-clock"></i> Thời gian</h4>
+                            <p>Buổi sáng là thời điểm tốt nhất để mua hoa tươi và nông sản. Buổi tối là thời gian của chợ đêm ẩm thực.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4><i class="fas fa-tshirt"></i> Trang phục</h4>
+                            <p>Mặc ấm khi đi chợ đêm, đặc biệt trong những tháng mùa đông ở Đà Lạt.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4><i class="fas fa-camera"></i> Chụp ảnh</h4>
+                            <p>Hỏi ý kiến người bán trước khi chụp ảnh các quầy hàng hoặc sản phẩm.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4><i class="fas fa-basket-shopping"></i> Mua sắm</h4>
+                            <p>Nên đi một vòng quan sát trước khi quyết định mua để so sánh chất lượng và giá cả.</p>
+                        </div>
+                        
+                        <div class="tip-card">
+                            <h4><i class="fas fa-car"></i> Di chuyển</h4>
+                            <p>Khu vực chợ thường đông đúc, khó đậu xe. Nên đi bộ hoặc gửi xe ở bãi gần đó.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Các điểm đến liên quan -->
+        <section class="related-destinations">
+            <div class="container">
+                <h2 class="section-title">Điểm đến liên quan</h2>
+                <div class="destinations-grid">
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/01/ho-xuan-huong-da-lat-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Hồ Xuân Hương" loading="lazy">
+                            <div class="distance-badge">Cách 0.5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1-2 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Miễn phí</span>
+                            </div>
+                            <h3>Hồ Xuân Hương</h3>
+                            <p>Hồ nước thơ mộng nằm ngay trung tâm thành phố Đà Lạt, là nơi lý tưởng để dạo bộ và ngắm cảnh.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/hoxuanhuong.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="culture">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/07/dinh-bao-dai-2.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Dinh Bảo Đại" loading="lazy">
+                            <div class="distance-badge">Cách 3km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 50.000đ</span>
+                            </div>
+                            <h3>Dinh Bảo Đại</h3>
+                            <p>Biệt thự nghỉ hè của vua Bảo Đại, công trình kiến trúc Pháp cổ được bảo tồn nguyên vẹn.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/dinhbaodai.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://cdn.dealtoday.vn/Thung-lung-tinh-yeu-Da-Lat-1_23022024102445.jpg" alt="Thung lũng Tình Yêu" loading="lazy">
+                            <div class="distance-badge">Cách 5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 2-3 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 100.000đ</span>
+                            </div>
+                            <h3>Thung lũng Tình Yêu</h3>
+                            <p>Điểm đến lãng mạn với đồi thông, hồ nước và những vườn hoa rực rỡ, là nơi lý tưởng cho các cặp đôi.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/thunglungty.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin du lịch Đà Lạt uy tín, cung cấp thông tin chính xác và hữu ích cho du khách.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../index.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../index.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                        <li><a href="../index.html#tours">Đặt Tour</a></li>
+                        <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Dịch vụ</h3>
+                    <ul>
+                        <li><a href="../index.html#tours">Tour du lịch</a></li>
+                        <li><a href="../index.html#transportation">Thuê xe du lịch</a></li>
+                        <li><a href="#">Đặt phòng khách sạn</a></li>
+                        <li><a href="#">Hướng dẫn viên</a></li>
+                        <li><a href="#">Đặt bàn nhà hàng</a></li>
+                        <li><a href="#">Vé tham quan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn đặt tour</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatTravel. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Save destination
+        const saveBtns = document.querySelectorAll('.save-btn');
+
+        saveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('saved');
+                btn.innerHTML = btn.classList.contains('saved') ? 
+                    '<i class="fas fa-heart"></i> Đã lưu' : '<i class="far fa-heart"></i> Lưu';
+            });
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+
+        // Image lightbox
+        const images = document.querySelectorAll('.market-item-img img, .market-intro-image img');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <img src="" alt="">
+                <span class="close">&times;</span>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        if (images) {
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    const lightboxImg = lightbox.querySelector('img');
+                    lightboxImg.src = this.src;
+                    lightboxImg.alt = this.alt;
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        }
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightbox.querySelector('img')) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

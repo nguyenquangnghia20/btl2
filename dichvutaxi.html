@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch vụ taxi Đà Lạt giá rẻ chỉ 12.000 VNĐ/km. Xe đời mới, lái xe chuyên nghiệp, hỗ trợ đặt xe 24/7 tại Đà Lạt.">
+    <title>Dịch Vụ Taxi Đà Lạt | Đà Lạt Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf;
+            --secondary-color: #ff6b6b;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Section */
+        .taxi-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://ticotravel.com.vn/wp-content/uploads/2022/06/Taxi-Da-Lat-1.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .taxi-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .taxi-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .taxi-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .taxi-meta span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        .taxi-booking-cta {
+            margin-top: 30px;
+        }
+
+        /* Taxi Detail Styles */
+        .taxi-detail {
+            padding: 60px 0;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        /* Thông tin taxi */
+        .taxi-info {
+            margin-bottom: 40px;
+        }
+
+        .taxi-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Danh sách loại xe */
+        .taxi-list {
+            margin-bottom: 40px;
+        }
+
+        .taxi-card {
+            display: flex;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .taxi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .taxi-img {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .taxi-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .taxi-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .taxi-card:hover .taxi-img img {
+            transform: scale(1.1);
+        }
+
+        .taxi-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .taxi-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .taxi-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .taxi-specs span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .taxi-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .taxi-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Dịch vụ bao gồm */
+        .taxi-included {
+            margin-bottom: 40px;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .included-icon {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        /* Thư viện ảnh */
+        .taxi-gallery {
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 150px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Sidebar */
+        .taxi-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .price-summary {
+            margin-top: 20px;
+            border-top: 1px solid var(--light-gray);
+            padding-top: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .price-total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+        }
+
+        .testimonial-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        /* Related Services */
+        .related-services {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            padding: 20px;
+        }
+
+        .service-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .service-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .service-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .service-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .save-btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .save-btn.saved {
+            color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .taxi-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .taxi-card {
+                flex-direction: column;
+            }
+            
+            .taxi-img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .taxi-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .taxi-meta {
+                gap: 15px;
+            }
+            
+            .taxi-meta span {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .taxi-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .taxi-sidebar {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../index.html#about">Giới thiệu</a></li>
+                    <li><a href="../index.html#destinations">Điểm đến</a></li>
+                    <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                    <li><a href="../index.html#tours">Đặt Tour</a></li>
+                    <li><a href="../index.html#transportation" class="active">Di chuyển</a></li>
+                    <li><a href="../index.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../index.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="../index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#transportation">Di chuyển</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Dịch Vụ Taxi Đà Lạt</span>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section cho dịch vụ taxi -->
+        <section class="taxi-hero">
+            <div class="container">
+                <h1>Dịch Vụ Taxi Đà Lạt</h1>
+                <div class="taxi-price">Giá chỉ từ 12.000 VNĐ/km</div>
+                <div class="taxi-meta">
+                    <span><i class="fas fa-taxi"></i> Xe đời mới</span>
+                    <span><i class="fas fa-clock"></i> Đón khách 24/7</span>
+                    <span><i class="fas fa-shield-alt"></i> An toàn tuyệt đối</span>
+                    <span><i class="fas fa-star"></i> 4.9/5 (512 đánh giá)</span>
+                </div>
+                <div class="taxi-booking-cta">
+                    <a href="#booking" class="btn btn-secondary">Đặt Xe Ngay</a>
+                    <a href="#taxi-list" class="btn">Xem Loại Xe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nội dung chi tiết dịch vụ taxi -->
+        <section class="taxi-detail">
+            <div class="container">
+                <div class="detail-content">
+                    <!-- Nội dung chính -->
+                    <div class="taxi-content">
+                        <!-- Điểm nổi bật -->
+                        <div class="taxi-info">
+                            <h2 class="section-title">Tại Sao Nên Sử Dụng Taxi Tại Đà Lạt?</h2>
+                            <p>Dịch vụ taxi tại Đà Lạt là phương tiện di chuyển tiện lợi, an toàn và thoải mái nhất cho du khách. Với giá cả hợp lý chỉ từ 12.000 VNĐ/km, bạn có thể di chuyển đến bất cứ đâu tại Đà Lạt mà không cần lo lắng về đường xá, bản đồ hay thời tiết.</p>
+                            
+                            <div class="taxi-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                                    <h3>Tiết Kiệm Thời Gian</h3>
+                                    <p>Không cần tìm đường, không lo lạc, đến đích nhanh chóng với tài xế địa phương giàu kinh nghiệm.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                    <h3>Giá Cả Minh Bạch</h3>
+                                    <p>Giá cước rõ ràng theo km, không phát sinh chi phí, có thể thanh toán bằng nhiều hình thức.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                    <h3>Di Chuyển Linh Hoạt</h3>
+                                    <p>Đón khách tận nơi, đúng giờ, có thể thay đổi điểm đến bất cứ lúc nào theo yêu cầu.</p>
+                                </div>
+                                
+                                <div class="feature-card">
+                                    <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                                    <h3>An Toàn Tuyệt Đối</h3>
+                                    <p>Xe đời mới, bảo dưỡng định kỳ, tài xế chuyên nghiệp, có bảo hiểm hành khách.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Danh sách loại xe -->
+                        <div class="taxi-list" id="taxi-list">
+                            <h2 class="section-title">Loại Xe Taxi</h2>
+                            
+                            <div class="taxi-card">
+                                <div class="taxi-img">
+                                    <img src="https://taxidongnai24h.com/wp-content/uploads/2022/12/gia-xe-taxi-4-cho.jpg" alt="Taxi 4 chỗ" loading="lazy">
+                                    <div class="taxi-badge">Phổ biến</div>
+                                </div>
+                                <div class="taxi-content">
+                                    <h3>Taxi 4 Chỗ</h3>
+                                    <div class="taxi-specs">
+                                        <span><i class="fas fa-user"></i> 4 người</span>
+                                        <span><i class="fas fa-suitcase"></i> 2 vali</span>
+                                        <span><i class="fas fa-snowflake"></i> Điều hòa</span>
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                    </div>
+                                    <p>Xe sedan cao cấp, phù hợp cho cặp đôi hoặc nhóm nhỏ 3-4 người di chuyển trong thành phố.</p>
+                                    <div class="taxi-price">12.000 VNĐ/km</div>
+                                    <div class="taxi-actions">
+                                        <a href="#booking" class="btn">Đặt Xe Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="taxi-card">
+                                <div class="taxi-img">
+                                    <img src="https://donataxi.com/wp-content/uploads/2022/05/Toyota-Fortuner-2021-5746-1600318079.jpg" alt="Taxi 7 chỗ" loading="lazy">
+                                    <div class="taxi-badge">Gia đình</div>
+                                </div>
+                                <div class="taxi-content">
+                                    <h3>Taxi 7 Chỗ</h3>
+                                    <div class="taxi-specs">
+                                        <span><i class="fas fa-user"></i> 7 người</span>
+                                        <span><i class="fas fa-suitcase"></i> 4 vali</span>
+                                        <span><i class="fas fa-snowflake"></i> Điều hòa</span>
+                                        <span><i class="fas fa-baby-carriage"></i> Ghế trẻ em</span>
+                                    </div>
+                                    <p>Xe SUV/MVP rộng rãi, phù hợp cho gia đình hoặc nhóm bạn từ 5-7 người, nhiều hành lý.</p>
+                                    <div class="taxi-price">14.000 VNĐ/km</div>
+                                    <div class="taxi-actions">
+                                        <a href="#booking" class="btn">Đặt Xe Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="taxi-card">
+                                <div class="taxi-img">
+                                    <img src="https://cafefcdn.com/203337114487263232/2023/4/14/file-7-22-1681463345729-1681463345871661784848.jpg" alt="Taxi cao cấp" loading="lazy">
+                                    <div class="taxi-badge">Cao cấp</div>
+                                </div>
+                                <div class="taxi-content">
+                                    <h3>Taxi Cao Cấp</h3>
+                                    <div class="taxi-specs">
+                                        <span><i class="fas fa-user"></i> 4 người</span>
+                                        <span><i class="fas fa-wine-glass"></i> Nước uống</span>
+                                        <span><i class="fas fa-newspaper"></i> Báo</span>
+                                        <span><i class="fas fa-charging-station"></i> Sạc USB</span>
+                                    </div>
+                                    <p>Xe hạng sang với đầy đủ tiện nghi, phù hợp cho khách doanh nhân hoặc du khách muốn trải nghiệm cao cấp.</p>
+                                    <div class="taxi-price">18.000 VNĐ/km</div>
+                                    <div class="taxi-actions">
+                                        <a href="#booking" class="btn">Đặt Xe Ngay</a>
+                                        <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dịch vụ bao gồm -->
+                        <div class="taxi-included">
+                            <h2 class="section-title">Dịch Vụ Bao Gồm</h2>
+                            
+                            <div class="included-grid">
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Xe đời mới</h4>
+                                            <p>Xe đời mới, bảo dưỡng định kỳ, đảm bảo an toàn và tiện nghi</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Tài xế chuyên nghiệp</h4>
+                                            <p>Tài xế nhiều kinh nghiệm, thông thạo đường Đà Lạt, phục vụ tận tình</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Đón khách tận nơi</h4>
+                                            <p>Đón khách tại khách sạn, nhà hàng hoặc bất kỳ địa điểm nào trong Đà Lạt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Bảo hiểm hành khách</h4>
+                                            <p>Bảo hiểm tai nạn cho hành khách trong suốt chuyến đi</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Hỗ trợ 24/7</h4>
+                                            <p>Tổng đài hỗ trợ 24/7, giải quyết mọi yêu cầu của khách hàng</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="included-item">
+                                        <div class="included-icon"><i class="fas fa-check"></i></div>
+                                        <div>
+                                            <h4>Thanh toán linh hoạt</h4>
+                                            <p>Chấp nhận tiền mặt, thẻ ngân hàng, ví điện tử hoặc chuyển khoản</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chính sách dịch vụ -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-info-circle"></i> Chính Sách Dịch Vụ</h3>
+                            <ul>
+                                <li>Giá cước tính theo km thực tế di chuyển, hiển thị trên đồng hồ tính tiền</li>
+                                <li>Phí mở cửa: 20.000 VNĐ cho mỗi lần đón/trả khách</li>
+                                <li>Chờ khách: 50.000 VNĐ/giờ (tính từ phút thứ 5 trở đi)</li>
+                                <li>Đón tại sân bay Liên Khương: phụ thu 50.000 VNĐ/chuyến</li>
+                                <li>Đặt xe trước ít nhất 30 phút để đảm bảo có xe phục vụ</li>
+                                <li>Hủy chuyến miễn phí trước 15 phút so với giờ hẹn</li>
+                            </ul>
+                        </div>
+
+                        <!-- Lưu ý khi sử dụng taxi -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Lưu Ý Khi Sử Dụng Taxi</h3>
+                            <ul>
+                                <li>Kiểm tra biển số xe và thông tin tài xế trước khi lên xe</li>
+                                <li>Yêu cầu tài xế bật đồng hồ tính tiền ngay khi bắt đầu chuyến đi</li>
+                                <li>Giữ liên lạc với người thân khi đi taxi ban đêm hoặc đường vắng</li>
+                                <li>Không để đồ đạc giá trị trên xe khi xuống xe</li>
+                                <li>Kiểm tra lại đồ đạc trước khi rời xe</li>
+                                <li>Yêu cầu hóa đơn thanh toán nếu cần</li>
+                            </ul>
+                        </div>
+
+                        <!-- Thư viện ảnh -->
+                        <div class="taxi-gallery">
+                            <h2 class="section-title">Hình Ảnh Dịch Vụ Taxi</h2>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="https://datxetaxigiare.click/wp-content/uploads/2024/08/xe-4-cho.jpg" alt="Taxi 4 chỗ" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://alobus.com/wp-content/uploads/2023/10/Taxi-Tien-Hong-Vinh-Bao.jpg" alt="Taxi 7 chỗ" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://uploads.nguoidothi.net.vn/content/c14147c5-41d1-48c8-b8be-581450e9a7e3.jpg" alt="Taxi cao cấp" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQpHj8_kjmfmcCtkuGSdDoXyDrCm5782TIcw&s" alt="Đón khách tại sân bay" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://img.lovepik.com/photo/50235/4589.jpg_wh860.jpg" alt="Tài xế chuyên nghiệp" loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="https://staticgthn.kinhtedothi.vn/zoom/868/uploaded/phamcong/2023_04_11/z425501218710160e010e1a9a5f669a5a9b8020e1ba940_ygao.jpg" alt="Xe taxi đời mới" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar với form đặt xe -->
+                    <aside class="taxi-sidebar" id="booking">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-calendar-alt"></i> Đặt Xe Taxi</h3>
+                            <form class="booking-form">
+                                <div class="form-group">
+                                    <label for="taxi-type">Loại xe</label>
+                                    <select id="taxi-type" required>
+                                        <option value="" disabled selected>Chọn loại xe</option>
+                                        <option value="taxi_4">Taxi 4 chỗ - 12.000 VNĐ/km</option>
+                                        <option value="taxi_7">Taxi 7 chỗ - 14.000 VNĐ/km</option>
+                                        <option value="taxi_premium">Taxi cao cấp - 18.000 VNĐ/km</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pickup-date">Ngày đón</label>
+                                    <input type="date" id="pickup-date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pickup-time">Giờ đón</label>
+                                    <input type="time" id="pickup-time" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pickup-location">Địa điểm đón</label>
+                                    <input type="text" id="pickup-location" placeholder="Nhập địa chỉ đón" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="dropoff-location">Địa điểm đến</label>
+                                    <input type="text" id="dropoff-location" placeholder="Nhập địa chỉ đến" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="name">Họ tên</label>
+                                    <input type="text" id="name" placeholder="Nhập họ tên" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Nhập email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="passengers">Số hành khách</label>
+                                    <input type="number" id="passengers" min="1" max="7" value="1" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="note">Ghi chú</label>
+                                    <textarea id="note" placeholder="Yêu cầu đặc biệt, điểm dừng giữa đường..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-secondary">Đặt Xe Ngay</button>
+                                
+                                <div class="price-summary">
+                                    <div class="price-row">
+                                        <span>Giá cơ bản</span>
+                                        <span>12.000 VNĐ/km</span>
+                                    </div>
+                                    <div class="price-row">
+                                        <span>Phí mở cửa</span>
+                                        <span>20.000 VNĐ</span>
+                                    </div>
+                                    <div class="price-row">
+                                        <span>Ước tính quãng đường</span>
+                                        <span>5 km</span>
+                                    </div>
+                                    <div class="price-row price-total">
+                                        <span>Tổng ước tính</span>
+                                        <span>80.000 VNĐ</span>
+                                    </div>
+                                    <p class="text-muted" style="font-size: 0.8rem; margin-top: 10px;">* Giá cuối cùng tính theo km thực tế di chuyển</p>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-phone-alt"></i> Hỗ Trợ Đặt Xe</h3>
+                            <p>Hotline: <a href="tel:19001868">1900 1868</a> (24/7)</p>
+                            <p>Email: <a href="mailto:taxi@dalattravel.vn">taxi@dalattravel.vn</a></p>
+                            <p>Zalo: <a href="https://zalo.me/84987654321">0987 654 321</a></p>
+                            <p>Địa chỉ: 123 Trần Hưng Đạo, Phường 1, Đà Lạt</p>
+                            <div style="margin-top: 15px;">
+                                <a href="#" class="btn" style="display: block; text-align: center; margin-bottom: 10px;"><i class="fab fa-facebook-messenger"></i> Chat Facebook</a>
+                                <a href="#" class="btn" style="display: block; text-align: center;"><i class="fas fa-qrcode"></i> Quét QR Zalo</a>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-comment-alt"></i> Đánh Giá</h3>
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Nguyễn Thị Mai" class="testimonial-avatar">
+                                    <div>
+                                        <div class="testimonial-author">Nguyễn Thị Mai</div>
+                                        <div class="testimonial-date">15/03/2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Tài xế rất thân thiện và chuyên nghiệp, xe sạch sẽ, đón đúng giờ. Giá cả minh bạch theo đồng hồ, không chặt chém như một số hãng taxi khác. Sẽ ủng hộ dịch vụ lần sau."</p>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Trần Văn Nam" class="testimonial-avatar">
+                                    <div>
+                                        <div class="testimonial-author">Trần Văn Nam</div>
+                                        <div class="testimonial-date">08/03/2024</div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>"Đặt xe từ sân bay về trung tâm Đà Lạt, tài xế đón đúng giờ dù chuyến bay của tôi bị delay. Xe 7 chỗ rộng rãi, phù hợp cho gia đình 5 người. Giá cả hợp lý, phục vụ tốt."</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dịch vụ liên quan -->
+        <section class="related-services">
+            <div class="container">
+                <h2 class="section-title">Dịch Vụ Liên Quan</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://storage.googleapis.com/blogvxr-uploads/2025/03/eac5f7c6-thue-xe-may-da-lat-6335156.jpg" alt="Thuê Xe Máy Đà Lạt" loading="lazy">
+                            <div class="service-badge">Tiết kiệm</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 100.000đ/ngày</span>
+                                <span><i class="fas fa-motorcycle"></i> Xe máy</span>
+                            </div>
+                            <h3>Thuê Xe Máy Đà Lạt</h3>
+                            <p>Xe đời mới, giá rẻ, tự do khám phá Đà Lạt theo cách của bạn.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/xemay.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://digiticket.vn/blog/wp-content/uploads/2022/08/thue-o-to-tu-lai-tai-da-lat-7.jpeg" alt="Thuê Xe Ô Tô Đà Lạt" loading="lazy">
+                            <div class="service-badge">Tiện nghi</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 800.000đ/ngày</span>
+                                <span><i class="fas fa-car"></i> 4-7 chỗ</span>
+                            </div>
+                            <h3>Thuê Xe Ô Tô Đà Lạt</h3>
+                            <p>Xe đời mới, tài xế nhiều kinh nghiệm, phù hợp cho gia đình hoặc nhóm bạn di chuyển xa.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/xeoto.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://inhat.vn/wp-content/uploads/2022/06/thue-xe-dap-da-lat-6.jpg" alt="Thuê Xe Đạp Đà Lạt" loading="lazy">
+                            <div class="service-badge">Eco</div>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-meta">
+                                <span><i class="fas fa-clock"></i> 50.000đ/ngày</span>
+                                <span><i class="fas fa-bicycle"></i> Xe đạp</span>
+                            </div>
+                            <h3>Thuê Xe Đạp Đà Lạt</h3>
+                            <p>Trải nghiệm Đà Lạt bằng xe đạp, thân thiện môi trường, phù hợp với những ai yêu thích vận động.</p>
+                            <div class="service-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/phương tiện/xedap.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin du lịch Đà Lạt uy tín, cung cấp thông tin chính xác và hữu ích cho du khách.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../index.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../index.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                        <li><a href="../index.html#tours">Đặt Tour</a></li>
+                        <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Dịch vụ</h3>
+                    <ul>
+                        <li><a href="../index.html#tours">Tour du lịch</a></li>
+                        <li><a href="../index.html#transportation">Thuê xe du lịch</a></li>
+                        <li><a href="#">Đặt phòng khách sạn</a></li>
+                        <li><a href="#">Hướng dẫn viên</a></li>
+                        <li><a href="#">Đặt bàn nhà hàng</a></li>
+                        <li><a href="#">Vé tham quan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn đặt tour</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatTravel. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Save service
+        const saveBtns = document.querySelectorAll('.save-btn');
+
+        saveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('saved');
+                btn.innerHTML = btn.classList.contains('saved') ? 
+                    '<i class="fas fa-heart"></i> Đã lưu' : '<i class="far fa-heart"></i> Lưu';
+            });
+        });
+
+        // Calculate taxi price
+        const taxiTypeSelect = document.getElementById('taxi-type');
+        const pickupLocationInput = document.getElementById('pickup-location');
+        const dropoffLocationInput = document.getElementById('dropoff-location');
+        const priceRows = document.querySelectorAll('.price-row span:last-child');
+        const priceTotal = document.querySelector('.price-total span:last-child');
+
+        const taxiPrices = {
+            'taxi_4': 12000,
+            'taxi_7': 14000,
+            'taxi_premium': 18000
+        };
+
+        function calculatePrice() {
+            const taxiType = taxiTypeSelect.value;
+            if (!taxiType) return;
+            
+            const pricePerKm = taxiPrices[taxiType];
+            const estimatedDistance = 5; // Default estimated distance for demo
+            
+            const total = pricePerKm * estimatedDistance + 20000; // Base price + opening fee
+            
+            priceRows[0].textContent = formatPrice(pricePerKm) + ' VNĐ/km';
+            priceRows[1].textContent = '20.000 VNĐ';
+            priceRows[2].textContent = estimatedDistance + ' km';
+            priceTotal.textContent = formatPrice(total) + ' VNĐ';
+        }
+
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        taxiTypeSelect.addEventListener('change', calculatePrice);
+        pickupLocationInput.addEventListener('input', calculatePrice);
+        dropoffLocationInput.addEventListener('input', calculatePrice);
+
+        // Initialize price calculation
+        calculatePrice();
+
+        // Form submission
+        const bookingForm = document.querySelector('.booking-form');
+        
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const taxiType = document.getElementById('taxi-type').value;
+            const pickupDate = document.getElementById('pickup-date').value;
+            const pickupTime = document.getElementById('pickup-time').value;
+            const pickupLocation = document.getElementById('pickup-location').value;
+            const dropoffLocation = document.getElementById('dropoff-location').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const passengers = document.getElementById('passengers').value;
+            const note = document.getElementById('note').value;
+            
+            // Here you would normally send this data to a server
+            // For demo, we'll just show an alert
+            alert(`Cảm ơn ${name} đã đặt taxi!\nChúng tôi sẽ liên hệ với bạn qua số ${phone} để xác nhận.`);
+            
+            // Reset form
+            bookingForm.reset();
+            calculatePrice();
+        });
+
+        // Gallery image lightbox
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <img src="" alt="">
+                <span class="close">&times;</span>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const lightboxImg = lightbox.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightbox.querySelector('img')) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Set min date for pickup date (today)
+        const today = new Date();
+        const dd = String(today.getDate()).padStart(2, '0');
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const yyyy = today.getFullYear();
+        const minDate = yyyy + '-' + mm + '-' + dd;
+        
+        document.getElementById('pickup-date').min = minDate;
+
+        // Set default time to current time + 30 minutes
+        const now = new Date();
+        now.setMinutes(now.getMinutes() + 30);
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        document.getElementById('pickup-time').value = hours + ':' + minutes;
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

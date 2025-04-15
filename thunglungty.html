@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thung Lũng Tình Yêu - Điểm đến lãng mạn nhất Đà Lạt với đồi thông, hồ nước và những vườn hoa rực rỡ.">
+    <title>Thung Lũng Tình Yêu | Đà Lạt Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc - Giữ nguyên như cũ */
+        :root {
+            --primary-color: #5a4fcf;
+            --secondary-color: #ff6b6b;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Destination Detail Styles */
+        .destination-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.dealtoday.vn/Thung-lung-tinh-yeu-Da-Lat-1_23022024102445.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+
+        .destination-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .destination-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .destination-meta span {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        .destination-detail {
+            padding: 60px 0;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        .destination-gallery {
+            margin-bottom: 40px;
+        }
+
+        .main-image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .main-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .thumbnail {
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 100px;
+        }
+
+        .thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .destination-info h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .destination-info p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .info-section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .info-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+        }
+
+        .info-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .sidebar-card ul {
+            margin-left: 5px;
+        }
+
+        .sidebar-card ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar-card ul li a {
+            color: var(--dark-color);
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-card ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .related-destinations {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .destination-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .destination-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .distance-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .destination-card:hover .destination-img img {
+            transform: scale(1.1);
+        }
+
+        .destination-info {
+            padding: 20px;
+        }
+
+        .destination-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .destination-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: none;
+            padding: 0;
+            backdrop-filter: none;
+        }
+
+        .destination-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .destination-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .destination-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .save-btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .save-btn.saved {
+            color: var(--secondary-color);
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .detail-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .destination-sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .destination-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .destination-meta {
+                gap: 15px;
+            }
+            
+            .destination-meta span {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .thumbnail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .destination-sidebar {
+                grid-template-columns: 1fr;
+            }
+            
+            .thumbnail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../index.html#about">Giới thiệu</a></li>
+                    <li><a href="../index.html#destinations" class="active">Điểm đến</a></li>
+                    <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                    <li><a href="../index.html#tours">Đặt Tour</a></li>
+                    <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    <li><a href="../index.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../index.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="../index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#destinations">Điểm đến</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Thung Lũng Tình Yêu</span>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section cho điểm đến -->
+        <section class="destination-hero">
+            <div class="container">
+                <h1>Thung Lũng Tình Yêu</h1>
+                <div class="destination-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Phường 8, TP. Đà Lạt</span>
+                    <span><i class="fas fa-clock"></i> 7:00 - 17:30 hàng ngày</span>
+                    <span><i class="fas fa-money-bill-wave"></i> 100.000đ/người</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nội dung chi tiết -->
+        <section class="destination-detail">
+            <div class="container">
+                <div class="detail-content">
+                    <!-- Gallery hình ảnh -->
+                    <div class="destination-gallery">
+                        <div class="main-image">
+                            <img src="https://static.vinwonders.com/production/thung-lung-tinh-yeu-1.jpg" alt="Toàn cảnh Thung Lũng Tình Yêu" loading="lazy">
+                        </div>
+                        <div class="thumbnail-grid">
+                            <div class="thumbnail">
+                                <img src="https://tourdulichgiare.com.vn/wp-content/uploads/2023/09/dap-vit-thung-lung-tinh-yeu.jpg" alt="Hồ nước thơ mộng" loading="lazy">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/07/22/thung-lung-tinh-yeu-da-lat-12-1521.jpg" alt="Vườn hoa rực rỡ" loading="lazy">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://img.360dalat.com/resize/730x-/2021/07/12/thung-lung-tinh-yeu-ca59.jpg" alt="Cầu tình yêu" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin chi tiết -->
+                    <div class="destination-info">
+                        <h2>Giới thiệu về Thung Lũng Tình Yêu</h2>
+                        <p>Thung Lũng Tình Yêu là một trong những điểm du lịch nổi tiếng nhất Đà Lạt, nằm cách trung tâm thành phố khoảng 5km về phía Bắc. Với diện tích rộng hơn 140ha, nơi đây được bao phủ bởi những đồi thông xanh mát, hồ nước thơ mộng và những vườn hoa rực rỡ sắc màu.</p>
+                        
+                        <p>Được người Pháp phát hiện từ những năm 1930 với tên gọi ban đầu là Vallée d'Amour, Thung Lũng Tình Yêu đã trở thành điểm hẹn lãng mạn của các cặp đôi. Ngày nay, nơi đây không chỉ là điểm check-in tuyệt đẹp mà còn có nhiều hoạt động giải trí hấp dẫn như đạp vịt, cưỡi ngựa, chụp ảnh với hoa và tham quan các công trình kiến trúc độc đáo.</p>
+                        
+                        <div class="info-section">
+                            <h3><i class="fas fa-info-circle"></i> Thông tin cần biết</h3>
+                            <ul>
+                                <li><strong>Giờ mở cửa:</strong> 7:00 - 17:30 hàng ngày</li>
+                                <li><strong>Giá vé:</strong> 100.000đ/người lớn, 50.000đ/trẻ em</li>
+                                <li><strong>Địa chỉ:</strong> Phường 8, TP. Đà Lạt, cách trung tâm 5km</li>
+                                <li><strong>Thời gian tham quan:</strong> 2-3 giờ</li>
+                                <li><strong>Diện tích:</strong> Hơn 140ha với hồ nước, đồi thông và vườn hoa</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h3><i class="fas fa-star"></i> Điểm nổi bật</h3>
+                            <ul>
+                                <li>Hồ Đa Thiện với những chiếc thuyền thiên nga lãng mạn</li>
+                                <li>Vườn hoa rộng lớn với hàng trăm loài hoa đặc trưng Đà Lạt</li>
+                                <li>Cầu tình yêu - điểm check-in không thể bỏ qua</li>
+                                <li>Đồi thông xanh mát với view toàn cảnh thung lũng</li>
+                                <li>Khu vui chơi giải trí với các hoạt động đạp vịt, cưỡi ngựa</li>
+                                <li>Nhiều góc chụp ảnh đẹp được thiết kế riêng cho các cặp đôi</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-section">
+                            <h3><i class="fas fa-images"></i> Hình ảnh</h3>
+                            <div class="image-grid">
+                                <img src="https://eholiday.vn/wp-content/uploads/2024/07/Ve-Tham-quan-Thung-Lung-Tinh-Yeu-Da-Lat-ho-thien-nga.jpg" alt="Thuyền thiên nga trên hồ" loading="lazy">
+                                <img src="https://bazantravel.com/cdn/medias/uploads/51/51415-hoa-lavender-da-lat-700x525.jpg" alt="Vườn hoa lavender" loading="lazy">
+                                <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_3000,h_1684/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ukykclh6jireescsohoj/V%C3%A9ThamQuanThungL%C5%A9ngT%C3%ACnhY%C3%AAu%E1%BB%9F%C4%90%C3%A0L%E1%BA%A1t-KlookVi%E1%BB%87tNam.jpg" alt="Đồi thông xanh mát" loading="lazy">
+                                <img src="https://statics.vinpearl.com/thung-lung-tinh-yeu-so-1_1689062132.jpg" alt="Khu vui chơi giải trí" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3><i class="fas fa-map-marked-alt"></i> Bản đồ</h3>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.715811983505!2d108.4375203153316!3d11.9408659917985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317112d959f88991%3A0x9dd3a8e7a0f7a4e0!2zSOG7kyBYdcOibiBIxrDGoW5n!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar với thông tin bổ sung -->
+                    <aside class="destination-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-clock"></i> Giờ mở cửa</h3>
+                            <p>7:00 - 17:30 hàng ngày</p>
+                            <p>Thời gian lý tưởng: 8:00-11:00 hoặc 14:00-16:00</p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-ticket-alt"></i> Giá vé</h3>
+                            <p>Người lớn: 100.000đ</p>
+                            <p>Trẻ em: 50.000đ</p>
+                            <p>Dịch vụ khác: 20.000đ - 100.000đ</p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-car"></i> Phương tiện di chuyển</h3>
+                            <p>Xe máy, taxi: 15 phút từ trung tâm</p>
+                            <p>Xe bus: Tuyến số 5, giá 10.000đ</p>
+                            <p>Tour du lịch: Thường bao gồm trong các tour Đà Lạt</p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-utensils"></i> Ẩm thực gần đó</h3>
+                            <ul>
+                                <li><a href="#">Quán cà phê Tình Yêu - trong khu du lịch</a></li>
+                                <li><a href="#">Nhà hàng Thông Reo - 12 Thung Lũng Tình Yêu</a></li>
+                                <li><a href="#">Quán sữa đậu nành - cổng vào thung lũng</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-hotel"></i> Khách sạn gần đó</h3>
+                            <ul>
+                                <li><a href="#">Terracotta Hotel & Resort</a></li>
+                                <li><a href="#">TTC Hotel Premium - Ngọc Lan</a></li>
+                                <li><a href="#">Ana Mandara Villas Dalat</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-heart"></i> Mẹo khi tham quan</h3>
+                            <ul>
+                                <li>Mang theo áo khoác nhẹ vì có thể lạnh</li>
+                                <li>Đi vào buổi sáng để tránh đông đúc</li>
+                                <li>Mặc trang phục màu sắc để chụp ảnh đẹp</li>
+                                <li>Thử trải nghiệm đạp vịt trên hồ</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Các điểm đến liên quan -->
+        <section class="related-destinations">
+            <div class="container">
+                <h2 class="section-title">Điểm đến liên quan</h2>
+                <div class="destinations-grid">
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/01/ho-xuan-huong-da-lat-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Hồ Xuân Hương" loading="lazy">
+                            <div class="distance-badge">Cách 5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1-2 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Miễn phí</span>
+                            </div>
+                            <h3>Hồ Xuân Hương</h3>
+                            <p>Hồ nước thơ mộng nằm ngay trung tâm thành phố Đà Lạt, được ví như trái tim của thành phố ngàn hoa.</p>
+                            <div class="destination-actions">
+                                <a href="ho-xuan-huong.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="culture">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/07/dinh-bao-dai-2.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Dinh Bảo Đại" loading="lazy">
+                            <div class="distance-badge">Cách 6km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 50.000đ</span>
+                            </div>
+                            <h3>Dinh Bảo Đại</h3>
+                            <p>Biệt thự nghỉ hè của vua Bảo Đại, công trình kiến trúc Pháp cổ được bảo tồn nguyên vẹn.</p>
+                            <div class="destination-actions">
+                                <a href="dinh-bao-dai.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://www.vietnambooking.com/wp-content/uploads/2019/04/Cho-dem-da-lat.jpg" alt="Chợ Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1-3 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Tùy mua sắm</span>
+                            </div>
+                            <h3>Chợ Đà Lạt</h3>
+                            <p>Trung tâm mua sắm sầm uất với đủ các loại đặc sản, đồ lưu niệm và hoa tươi của Đà Lạt.</p>
+                            <div class="destination-actions">
+                                <a href="cho-da-lat.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin du lịch Đà Lạt uy tín, cung cấp thông tin chính xác và hữu ích cho du khách.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="../index.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../index.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../index.html#cuisine">Ẩm thực</a></li>
+                        <li><a href="../index.html#tours">Đặt Tour</a></li>
+                        <li><a href="../index.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Dịch vụ</h3>
+                    <ul>
+                        <li><a href="../index.html#tours">Tour du lịch</a></li>
+                        <li><a href="../index.html#transportation">Thuê xe du lịch</a></li>
+                        <li><a href="#">Đặt phòng khách sạn</a></li>
+                        <li><a href="#">Hướng dẫn viên</a></li>
+                        <li><a href="#">Đặt bàn nhà hàng</a></li>
+                        <li><a href="#">Vé tham quan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn đặt tour</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatTravel. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Save destination
+        const saveBtns = document.querySelectorAll('.save-btn');
+
+        saveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('saved');
+                btn.innerHTML = btn.classList.contains('saved') ? 
+                    '<i class="fas fa-heart"></i> Đã lưu' : '<i class="far fa-heart"></i> Lưu';
+            });
+        });
+
+        // Gallery image click to enlarge
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        const mainImage = document.querySelector('.main-image img');
+        
+        if (thumbnails && mainImage) {
+            thumbnails.forEach(img => {
+                img.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                    mainImage.alt = this.alt;
+                    
+                    // Add animation
+                    mainImage.style.opacity = 0;
+                    setTimeout(() => {
+                        mainImage.style.opacity = 1;
+                        mainImage.style.transition = 'opacity 0.3s ease';
+                    }, 100);
+                });
+            });
+        }
+
+        // Image lightbox
+        const images = document.querySelectorAll('.image-grid img');
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <img src="" alt="">
+                <span class="close">&times;</span>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        if (images) {
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    const lightboxImg = lightbox.querySelector('img');
+                    lightboxImg.src = this.src;
+                    lightboxImg.alt = this.alt;
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        }
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightbox.querySelector('img')) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

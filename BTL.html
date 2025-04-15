@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá Đà Lạt - Thành phố ngàn hoa với những điểm đến hấp dẫn, ẩm thực đặc sắc và dịch vụ du lịch chất lượng">
+    <title>Đà Lạt - Thành phố ngàn hoa | Du lịch Đà Lạt 2024</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://maps.google.com">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc */
+        :root {
+            --primary-color: #5a4fcf; /* Màu tím đặc trưng Đà Lạt */
+            --secondary-color: #ff6b6b; /* Màu cam nhạt */
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn3.ivivu.com/2023/10/du-lich-Da-Lat-ivivu.jpg') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .quick-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .info-item i {
+            font-size: 1.2rem;
+        }
+
+        /* Quick Links */
+        .quick-links {
+            padding: 50px 0;
+            background-color: var(--white);
+        }
+
+        .quick-links-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .quick-link-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .quick-link-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .quick-link-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-item:hover .quick-link-icon {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .quick-link-item h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Destinations Section */
+        .destinations {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: var(--light-gray);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .destination-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .destination-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .distance-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .destination-card:hover .destination-img img {
+            transform: scale(1.1);
+        }
+
+        .destination-info {
+            padding: 20px;
+        }
+
+        .destination-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .destination-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .destination-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .destination-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .destination-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .save-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .save-btn:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .save-btn.saved {
+            color: var(--secondary-color);
+        }
+
+        /* Cuisine Section */
+        .cuisine {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .cuisine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .food-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .food-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .food-card:hover .food-img img {
+            transform: scale(1.1);
+        }
+
+        .food-info {
+            padding: 20px;
+        }
+
+        .food-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .food-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Itinerary Section */
+        .itinerary {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            padding: 10px 25px;
+            background: var(--light-gray);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .itinerary-steps {
+            background: var(--light-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-time {
+            min-width: 80px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-align: center;
+            height: fit-content;
+            font-weight: 500;
+        }
+
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .step-content p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Tours Section */
+        .tours {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tour-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .tour-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tour-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .tour-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tour-card:hover .tour-img img {
+            transform: scale(1.1);
+        }
+
+        .tour-info {
+            padding: 20px;
+        }
+
+        .tour-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .tour-price {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tour-duration {
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tour-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .tour-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .tour-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tour-feature {
+            background: var(--light-gray);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Transportation Section */
+        .transportation {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .transport-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .transport-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .transport-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .transport-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .transport-card:hover .transport-img img {
+            transform: scale(1.1);
+        }
+
+        .transport-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .transport-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .transport-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .transport-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .transport-price {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .transport-type {
+            background: var(--light-gray);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--white);
+            border: none;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--white);
+        }
+
+        .faq-answer.active {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .contact-info ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info ul li i {
+            width: 20px;
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .contact-form h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-map {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            min-height: 300px;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 0 25px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .quick-links-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .step-time {
+                width: fit-content;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .transport-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-links-container {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#destinations">Điểm đến</a></li>
+                    <li><a href="#cuisine">Ẩm thực</a></li>
+                    <li><a href="#tours">Đặt Tour</a></li>
+                    <li><a href="#transportation">Di chuyển</a></li>
+                    <li><a href="#itinerary">Lịch trình</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Khám phá Đà Lạt - Thành phố ngàn hoa</h1>
+                <p class="highlight">Nhiệt độ hiện tại: 18°C • Mùa hoa: Tháng 10 - Tháng 3</p>
+                <p>Trải nghiệm không khí trong lành, cảnh quan thiên nhiên tươi đẹp và ẩm thực đặc sắc</p>
+                
+                <div class="hero-btns">
+                    <a href="#destinations" class="btn">
+                        <i class="fas fa-map-marked-alt"></i> Điểm đến nổi bật
+                    </a>
+                    <a href="#tours" class="btn">
+                        <i class="fas fa-suitcase"></i> Đặt Tour ngay
+                    </a>
+                    <a href="#itinerary" class="btn btn-secondary">
+                        <i class="fas fa-calendar-alt"></i> Lịch trình gợi ý
+                    </a>
+                </div>
+                
+                <div class="quick-info">
+                    <div class="info-item">
+                        <i class="fas fa-sun"></i>
+                        <span>Thời tiết: Mát mẻ</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-bus"></i>
+                        <span>Di chuyển: Dễ dàng</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span>Phù hợp: Cá nhân & Gia đình</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="quick-links-container">
+                    <div class="quick-link-item">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Điểm đến</h3>
+                        <p>Khám phá những địa điểm du lịch nổi tiếng</p>
+                        <a href="#destinations" class="btn">Xem thêm</a>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Ẩm thực</h3>
+                        <p>Thưởng thức đặc sản Đà Lạt</p>
+                        <a href="#cuisine" class="btn">Xem thêm</a>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-suitcase"></i>
+                        </div>
+                        <h3>Tour Du lịch</h3>
+                        <p>Các tour trọn gói hấp dẫn</p>
+                        <a href="#tours" class="btn">Xem thêm</a>
+                    </div>
+                    <div class="quick-link-item">
+                        <div class="quick-link-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Di chuyển</h3>
+                        <p>Dịch vụ thuê xe và phương tiện</p>
+                        <a href="#transportation" class="btn">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title text-center">Giới thiệu về Đà Lạt</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Đà Lạt - thành phố cao nguyên xinh đẹp nằm ở độ cao 1.500m so với mực nước biển, được mệnh danh là "thành phố ngàn hoa" với khí hậu ôn đới quanh năm mát mẻ, cảnh quan thiên nhiên tươi đẹp và con người hiền hòa.</p>
+                        <p>Đà Lạt nổi tiếng với những đồi thông bạt ngàn, hồ nước thơ mộng, những vườn hoa rực rỡ sắc màu và kiến trúc Pháp cổ kính. Thành phố này còn là thiên đường của những món ăn đặc sản như bánh ướt lòng gà, bánh căn, lẩu gà lá é...</p>
+                        <p>Đến với Đà Lạt, du khách sẽ được trải nghiệm sự bình yên hiếm có, khám phá vẻ đẹp của thiên nhiên và thưởng thức những món ngon đặc trưng của vùng đất cao nguyên.</p>
+                        <a href="project/timhieuthem.html" class="btn">Tìm hiểu thêm</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://khachsandalat.pro/wp-content/uploads/2016/08/thanh-pho-da-lat-3.jpg" alt="Thành phố Đà Lạt nhìn từ trên cao" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section class="destinations" id="destinations">
+            <div class="container">
+                <h2 class="section-title text-center">Điểm đến nổi bật</h2>
+                
+                <!-- Bộ lọc -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Tất cả</button>
+                    <button class="filter-btn" data-filter="nature">Thiên nhiên</button>
+                    <button class="filter-btn" data-filter="culture">Văn hóa</button>
+                    <button class="filter-btn" data-filter="food">Ẩm thực</button>
+                    <button class="filter-btn" data-filter="near">Gần trung tâm</button>
+                </div>
+                
+                <div class="destinations-grid">
+                    <div class="destination-card" data-filter="nature near">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/01/ho-xuan-huong-da-lat-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Hồ Xuân Hương Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 0.5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1-2 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Miễn phí</span>
+                            </div>
+                            <h3>Hồ Xuân Hương</h3>
+                            <p>Trái tim của thành phố Đà Lạt, nơi du khách có thể dạo bộ, ngắm cảnh và thưởng thức cà phê bên hồ.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/hoxuanhuong.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://cdn.dealtoday.vn/Thung-lung-tinh-yeu-Da-Lat-1_23022024102445.jpg" alt="Thung lũng Tình Yêu Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 5km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 2-3 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 100.000đ</span>
+                            </div>
+                            <h3>Thung lũng Tình Yêu</h3>
+                            <p>Điểm đến lãng mạn với đồi thông, hồ nước và những vườn hoa rực rỡ, là nơi lý tưởng cho các cặp đôi.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/thunglungty.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="culture">
+                        <div class="destination-img">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2023/07/dinh-bao-dai-2.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt="Dinh Bảo Đại Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 3km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 50.000đ</span>
+                            </div>
+                            <h3>Dinh Bảo Đại</h3>
+                            <p>Biệt thự nghỉ hè của vua Bảo Đại, công trình kiến trúc Pháp cổ được bảo tồn nguyên vẹn.GIữ nguyên giá trị của cổ thự</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/dinhbaodai.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="food near">
+                        <div class="destination-img">
+                            <img src="https://www.vietnambooking.com/wp-content/uploads/2019/04/Cho-dem-da-lat.jpg" alt="Chợ đêm Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 1km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 1-3 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> Tùy mua sắm</span>
+                            </div>
+                            <h3>Chợ Đà Lạt</h3>
+                            <p>Trung tâm mua sắm sầm uất với đủ các loại đặc sản, đồ lưu niệm và hoa tươi của Đà Lạt.Các loại đặc sản cùng những món hàng thú vị</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/chodalat.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://statics.vinpearl.com/dinh-langbiang-thumb_1689566293.jpg" alt="Núi Lang Biang Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 12km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> Nửa ngày</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 300.000đ</span>
+                            </div>
+                            <h3>Lang Biang</h3>
+                            <p>Ngọn núi cao nhất Đà Lạt, nơi du khách có thể ngắm toàn cảnh thành phố từ trên cao. Gói gọn đà lạt trong tầm mắt , cùng với cảnh thiên nhiên hùng vĩ</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/langbiang.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-card" data-filter="nature">
+                        <div class="destination-img">
+                            <img src="https://owa.bestprice.vn/images/destinations/uploads/thac-datanla-5f75817898c0b.jpg" alt="Thác Datanla Đà Lạt" loading="lazy">
+                            <div class="distance-badge">Cách 10km</div>
+                        </div>
+                        <div class="destination-info">
+                            <div class="destination-meta">
+                                <span><i class="fas fa-clock"></i> 2-3 giờ</span>
+                                <span><i class="fas fa-money-bill-wave"></i> 100.000đ</span>
+                            </div>
+                            <h3>Thác Datanla</h3>
+                            <p>Thác nước đẹp nổi tiếng với hệ thống máng trượt cảm giác mạnh và cảnh quan thiên nhiên hùng vĩ. Khu vực xung quanh được giữ gìn khá tự nhiên.</p>
+                            <div class="destination-actions">
+                                <a href="bai_tap_lon_thiet_ke_web/project/thac.html" class="btn">Xem chi tiết</a>
+                                <button class="save-btn"><i class="far fa-heart"></i> Lưu</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisine Section -->
+        <section class="cuisine" id="cuisine">
+            <div class="container">
+                <h2 class="section-title text-center">Ẩm thực Đà Lạt</h2>
+                <div class="cuisine-grid">
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://i.ytimg.com/vi/QSXWHy05U7g/maxresdefault.jpg" alt="Bánh ướt lòng gà Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Bánh ướt lòng gà</h3>
+                            <p>Món ăn sáng đặc trưng của Đà Lạt với bánh ướt mềm mại ăn kèm lòng gà giòn ngon và nước chấm đặc biệt.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/banhuotlongga.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://vietfood.org.vn/wp-content/uploads/2021/09/BanhCan1.jpg" alt="Bánh căn Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Bánh căn</h3>
+                            <p>Món ăn vặt nổi tiếng làm từ bột gạo, nướng trong khuôn đất nhỏ, ăn kèm trứng, tôm khô và nước chấm.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/banhcan.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://cdn.24h.com.vn/upload/1-2024/images/2024-01-31/Cach-lam-lau-ga-la-e-ngon-kho-cuong-an-la-ghien-1-1706686789-471-width1284height963.jpg" alt="Lẩu gà lá é Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Lẩu gà lá é</h3>
+                            <p>Món lẩu đặc biệt với thịt gà ta thơm ngon, nước dùng được nấu từ xương gà và lá é tạo hương vị độc đáo.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/laugalae.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://www.cotrang.org/public/images/tin_dang/6/270_banh-trang-nuong-da-lat-bk-1.jpg" alt="Bánh tráng nướng Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Bánh tráng nướng</h3>
+                            <p>Món ăn vặt "quốc dân" của Đà Lạt với bánh tráng nướng giòn, phủ đầy trứng, thịt bằm, hành phi và sốt đặc biệt.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/banhtrangnuong.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://mia.vn/media/uploads/blog-du-lich/kem-bo-da-lat-diem-danh-4-quan-kem-bo-gay-nghien-tai-da-lat-01-1634199459.jpeg" alt="Kem bơ Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Kem bơ</h3>
+                            <p>Đặc sản ngọt ngào của Đà Lạt làm từ bơ tươi, sữa đặc và dừa nạo, có vị béo ngậy và thơm mát.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/kembo.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-img">
+                            <img src="https://storage.googleapis.com/onelife-public/blog.onelife.vn/2024/01/bc3a163d-dau-tay-da-lat.png" alt="Dâu tây Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="food-info">
+                            <h3>Dâu tây Đà Lạt</h3>
+                            <p>Loại trái cây đặc sản nổi tiếng của vùng đất cao nguyên, ngọt thanh và giàu dinh dưỡng. là một sản phẩm nổi tiếng khi nhắc tới đà lạt</p>
+                            <a href="bai_tap_lon_thiet_ke_web/ẩm thực/dautay.html" class="btn">Xem địa chỉ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>vb                                                        
+        </section>
+
+        <!-- Tours Section -->
+        <section class="tours" id="tours">
+            <div class="container">
+                <h2 class="section-title text-center">Tour Du lịch Đà Lạt</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Chọn tour phù hợp với nhu cầu của bạn để khám phá Đà Lạt một cách trọn vẹn nhất</p>
+                
+                <div class="tours-grid">
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://mia.vn/media/uploads/blog-du-lich/lich-trinh-da-lat-3n2d-tu-tuc-cho-nhom-ban-thuc-te-va-chi-tiet-tu-a-z-2-1635184933.jpg" alt="Tour Đà Lạt 1 ngày" loading="lazy">
+                            <div class="tour-badge">Bán chạy</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Đà Lạt 1 Ngày</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">1.200.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 1 ngày</span>
+                            </div>
+                            <p>Khám phá các điểm đến nổi tiếng nhất Đà Lạt chỉ trong 1 ngày với hướng dẫn viên chuyên nghiệp.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Xe đưa đón</span>
+                                <span class="tour-feature">Ăn trưa</span>
+                                <span class="tour-feature">Vé tham quan</span>
+                                <span class="tour-feature">Giám giá vé</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/1ngay.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://hoadalattravel.vn/wp-content/uploads/2024/08/tour-quang-ngai-da-lat-3-ngay-2-dem-15.jpeg" alt="Tour Đà Lạt 2 ngày 1 đêm" loading="lazy">
+                            <div class="tour-badge">Tiết kiệm</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Đà Lạt 2 Ngày 1 Đêm</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">2.500.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 2 ngày</span>
+                            </div>
+                            <p>Trải nghiệm trọn vẹn Đà Lạt với lịch trình được thiết kế khoa học, bao gồm cả đêm tại khách sạn 3 sao.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Khách sạn 3 sao</span>
+                                <span class="tour-feature">Ăn uống đầy đủ</span>
+                                <span class="tour-feature">Hướng dẫn viên</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/2ng1dem.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://dulichchat.com/wp-content/uploads/2020/11/du-lich-da-lat-dulichchat-40-scaled.jpg" alt="Tour Đà Lạt 3 ngày 2 đêm" loading="lazy">
+                            <div class="tour-badge">Cao cấp</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Đà Lạt 3 Ngày 2 Đêm</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">4.200.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 3 ngày</span>
+                            </div>
+                            <p>Tour cao cấp khám phá mọi ngóc ngách Đà Lạt, nghỉ dưỡng tại khách sạn 4 sao và thưởng thức ẩm thực đặc sắc.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Khách sạn 4 sao</span>
+                                <span class="tour-feature">Ăn uống đặc sản</span>
+                                <span class="tour-feature">Trọn gói tiện nghi</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/3ng2dem.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/473772Owo/chup-anh-dep-da-lat-mon-studio-801256.jpg" alt="Tour gia đình Đà Lạt" loading="lazy">
+                            <div class="tour-badge">Gia đình</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Gia Đình Đà Lạt</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">3.500.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 3 ngày</span>
+                            </div>
+                            <p>Tour thiết kế riêng cho gia đình với các hoạt động phù hợp mọi lứa tuổi, đảm bảo an toàn và thoải mái.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Hoạt động gia đình</span>
+                                <span class="tour-feature">Phòng gia đình</span>
+                                <span class="tour-feature">Giảm giá trẻ em</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/tourgd.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://giadinh.mediacdn.vn/296230595582509056/2023/6/24/33311136228578271976808978690685227787126786n-1687621543072-1687621543168204705777.jpg" alt="Tour tự túc Đà Lạt" loading="lazy">
+                            <div class="tour-badge">Tự túc</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Tự Túc Đà Lạt</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">1.800.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 2 ngày</span>
+                            </div>
+                            <p>Tour dành cho người thích tự do khám phá, bao gồm vé tham quan và phương tiện di chuyển theo yêu cầu.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Linh hoạt</span>
+                                <span class="tour-feature">Tự do thời gian</span>
+                                <span class="tour-feature">Hỗ trợ 24/7</span>
+                                <span class="tour-feature">Đổi lịch tự do</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/tourtutuc.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-img">
+                            <img src="https://i.vietgiaitri.com/2020/12/13/doi-co-hong-da-lat-mua-cuoi-dong-duc-cac-cap-doi-tim-toi-de-chup-anh-3f4-5441549.jpg" alt="Tour cặp đôi Đà Lạt" loading="lazy">
+                            <div class="tour-badge">Lãng mạn</div>
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tour Cặp Đôi Đà Lạt</h3>
+                            <div class="tour-meta">
+                                <span class="tour-price">3.800.000đ</span>
+                                <span class="tour-duration"><i class="fas fa-clock"></i> 2 ngày</span>
+                            </div>
+                            <p>Tour lãng mạn dành cho các cặp đôi với các điểm đến tình tứ, dịch vụ cao cấp và không gian riêng tư.</p>
+                            <div class="tour-features">
+                                <span class="tour-feature">Khách sạn sang trọng</span>
+                                <span class="tour-feature">Bữa tối lãng mạn</span>
+                                <span class="tour-feature">Quà tặng đặc biệt</span>
+                            </div>
+                            <a href="bai_tap_lon_thiet_ke_web/tour/3n2dcapdoi.html" class="btn" style="width: 100%; text-align: center;">Đặt Tour Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transportation Section -->
+        <section class="transportation" id="transportation">
+            <div class="container">
+                <h2 class="section-title text-center">Phương tiện di chuyển</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Lựa chọn phương tiện phù hợp để khám phá Đà Lạt một cách thuận tiện nhất</p>
+                
+                <div class="transport-grid">
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://agotourist.com/wp-content/uploads/2019/06/cho-thue-xe-may-da-lat.jpg" alt="Thuê xe máy Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Thuê Xe Máy</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">Từ 100.000đ/ngày</span>
+                                <span class="transport-type">Tự lái</span>
+                            </div>
+                            <p>Dịch vụ thuê xe máy chất lượng cao với đầy đủ các dòng xe từ phổ thông đến cao cấp, phù hợp với mọi nhu cầu.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/phương tiện/xemay.html" class="btn" style="width: 100%; text-align: center;">Thuê Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://motortrip.vn/wp-content/uploads/2021/07/thue-xe-o-to-tu-lai-ha-noi-3.jpg" alt="Thuê xe ô tô Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Thuê Xe Ô Tô</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">Từ 800.000đ/ngày</span>
+                                <span class="transport-type">Có tài xế</span>
+                            </div>
+                            <p>Dịch vụ thuê xe ô tô đời mới, có tài xế am hiểu địa hình Đà Lạt, phục vụ tận tình chu đáo.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/phương tiện/xeoto.html" class="btn" style="width: 100%; text-align: center;">Thuê Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://sonhailimousine.com/upload/filemanager/du-lich-ha-noi-bang-xe-bus%20(14).png" alt="Xe buýt Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Xe Buýt Du lịch</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">50.000đ/lượt</span>
+                                <span class="transport-type">Công cộng</span>
+                            </div>
+                            <p>Hệ thống xe buýt du lịch chuyên phục vụ các tuyến điểm tham quan nổi tiếng với lịch trình cố định.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem Lịch Trình</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://cdn.xanhsm.com/2025/02/11aff2b1-taxi-da-lat-1.jpg" alt="Taxi Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Dịch vụ Taxi</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">12.000đ/km</span>
+                                <span class="transport-type">Theo yêu cầu</span>
+                            </div>
+                            <p>Đặt xe taxi nhanh chóng, an toàn với đội ngũ tài xế thân thiện, am hiểu các điểm du lịch tại Đà Lạt.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/phương tiện/dichvutaxi.html" class="btn" style="width: 100%; text-align: center;">Đặt Xe Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://xedulichdalat.vn/wp-content/uploads/2024/01/list-10-dia-diem-thue-xe-dap-da-lat-gia-re-4.jpg" alt="Xe đạp Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Thuê Xe Đạp</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">50.000đ/ngày</span>
+                                <span class="transport-type">Tự lái</span>
+                            </div>
+                            <p>Trải nghiệm Đà Lạt theo cách chậm rãi với dịch vụ thuê xe đạp chất lượng, phù hợp khám phá trung tâm thành phố.</p>
+                            <a href="bai_tap_lon_thiet_ke_web/phương tiện/xedap.html" class="btn" style="width: 100%; text-align: center;">Thuê Ngay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <div class="transport-img">
+                            <img src="https://motogo.vn/wp-content/uploads/2023/03/xe-limousine-ha-noi-quang-ninh7.jpg" alt="Xe Limousine Đà Lạt" loading="lazy">
+                        </div>
+                        <div class="transport-info">
+                            <h3>Xe Limousine</h3>
+                            <div class="transport-meta">
+                                <span class="transport-price">Từ 1.500.000đ/ngày</span>
+                                <span class="transport-type">Cao cấp</span>
+                            </div>
+                            <p>Dịch vụ xe limousine cao cấp với đầy đủ tiện nghi, phục vụ các chuyến tham quan theo yêu cầu.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Đặt Xe Ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary Section -->
+        <section class="itinerary" id="itinerary">
+            <div class="container">
+                <h2 class="section-title text-center">Lịch trình gợi ý</h2>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="1day">1 ngày</button>
+                    <button class="tab-btn" data-tab="2day">2 ngày 1 đêm</button>
+                    <button class="tab-btn" data-tab="3day">3 ngày 2 đêm</button>
+                </div>
+                
+                <div class="tab-content active" id="1day">
+                    <h3>Trải nghiệm Đà Lạt trong 1 ngày</h3>
+                    <div class="itinerary-steps">
+                        <div class="step">
+                            <div class="step-time">Sáng</div>
+                            <div class="step-content">
+                                <h4>7:00 - Ăn sáng với bánh ướt lòng gà</h4>
+                                <p>Quán bánh ướt lòng gà Thanh Thủy - 74 Phan Đình Phùng</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Sáng</div>
+                            <div class="step-content">
+                                <h4>8:30 - Tham quan Dinh Bảo Đại</h4>
+                                <p>Khám phá biệt thự nghỉ hè của vua Bảo Đại</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Sáng</div>
+                            <div class="step-content">
+                                <h4>10:00 - Dạo quanh Hồ Xuân Hương</h4>
+                                <p>Ngắm cảnh hồ, chụp ảnh và thưởng thức cà phê bên hồ</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa với lẩu gà lá é</h4>
+                                <p>Nhà hàng Lẩu Gà Lá É - 12 Nguyễn Văn Trỗi</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan Thung lũng Tình Yêu</h4>
+                                <p>Khám phá cảnh quan thiên nhiên và chụp ảnh</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Chiều</div>
+                            <div class="step-content">
+                                <h4>16:30 - Mua sắm tại chợ Đà Lạt</h4>
+                                <p>Mua đặc sản và đồ lưu niệm</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Tối</div>
+                            <div class="step-content">
+                                <h4>18:30 - Ăn tối và thưởng thức bánh tráng nướng</h4>
+                                <p>Khu ẩm thực chợ đêm Đà Lạt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="2day">
+                    <h3>Trải nghiệm Đà Lạt 2 ngày 1 đêm</h3>
+                    <div class="itinerary-steps">
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Sáng</div>
+                            <div class="step-content">
+                                <h4>8:00 - Ăn sáng với bánh căn</h4>
+                                <p>Quán bánh căn Lệ - 15 Nguyễn Trãi</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Sáng</div>
+                            <div class="step-content">
+                                <h4>9:00 - Tham quan Dinh Bảo Đại</h4>
+                                <p>Tìm hiểu lịch sử và kiến trúc Pháp cổ</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa tại nhà hàng</h4>
+                                <p>Thưởng thức các món đặc sản Đà Lạt</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan Thác Datanla</h4>
+                                <p>Khám phá thác nước và trải nghiệm máng trượt</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Tối</div>
+                            <div class="step-content">
+                                <h4>18:00 - Ăn tối và dạo chợ đêm</h4>
+                                <p>Thưởng thức ẩm thực đường phố và mua sắm</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Sáng</div>
+                            <div class="step-content">
+                                <h4>7:30 - Ăn sáng và lên núi Lang Biang</h4>
+                                <p>Ngắm toàn cảnh Đà Lạt từ trên cao</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa tại vườn rau</h4>
+                                <p>Thưởng thức rau củ tươi ngon tại vườn</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan vườn hoa</h4>
+                                <p>Chụp ảnh tại các vườn hoa đẹp nhất Đà Lạt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="3day">
+                    <h3>Trải nghiệm Đà Lạt 3 ngày 2 đêm</h3>
+                    <div class="itinerary-steps">
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Sáng</div>
+                            <div class="step-content">
+                                <h4>8:00 - Ăn sáng và tham quan Hồ Xuân Hương</h4>
+                                <p>Dạo quanh hồ và thưởng thức cà phê</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa tại nhà hàng</h4>
+                                <p>Thưởng thức các món đặc sản</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan Thung lũng Tình Yêu</h4>
+                                <p>Khám phá cảnh quan thiên nhiên</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 1 Tối</div>
+                            <div class="step-content">
+                                <h4>18:00 - Ăn tối và dạo chợ đêm</h4>
+                                <p>Mua sắm đặc sản và đồ lưu niệm</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Sáng</div>
+                            <div class="step-content">
+                                <h4>7:30 - Ăn sáng và lên núi Lang Biang</h4>
+                                <p>Ngắm toàn cảnh Đà Lạt từ trên cao</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa tại vườn rau</h4>
+                                <p>Thưởng thức rau củ tươi ngon tại vườn</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 2 Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan Thác Datanla</h4>
+                                <p>Khám phá thác nước và trải nghiệm máng trượt</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 3 Sáng</div>
+                            <div class="step-content">
+                                <h4>8:00 - Ăn sáng và tham quan vườn hoa</h4>
+                                <p>Chụp ảnh tại các vườn hoa đẹp nhất Đà Lạt</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 3 Trưa</div>
+                            <div class="step-content">
+                                <h4>12:00 - Ăn trưa tại nhà hàng</h4>
+                                <p>Thưởng thức các món đặc sản</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-time">Ngày 3 Chiều</div>
+                            <div class="step-content">
+                                <h4>14:00 - Tham quan làng hoa Vạn Thành</h4>
+                                <p>Khám phá làng hoa truyền thống của Đà Lạt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title text-center">Câu hỏi thường gặp</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Thời điểm nào đẹp nhất để đến Đà Lạt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Đà Lạt đẹp quanh năm, nhưng thời điểm lý tưởng nhất là từ tháng 10 đến tháng 3 khi tiết trời khô ráo và nhiều hoa nở. Tháng 12 có hoa dã quỳ, tháng 1-2 có hoa mai anh đào.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Di chuyển trong Đà Lạt như thế nào?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Có nhiều lựa chọn: thuê xe máy (100-150k/ngày), taxi (khoảng 10k/km), xe ôm (20-30k/ngắn) hoặc thuê xe ô tô có tài xế (từ 800k/ngày).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Đà Lạt có những đặc sản gì nổi tiếng?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Đà Lạt nổi tiếng với: bánh ướt lòng gà, bánh căn, lẩu gà lá é, bánh tráng nướng, kem bơ, dâu tây, atiso, các loại mứt và rau củ đặc sản.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Nên mua gì làm quà khi đến Đà Lạt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Các món quà lưu niệm phổ biến: mứt các loại (dâu, hồng, atiso), trà atiso, rượu vang Đà Lạt, dâu tây sấy, rau củ đặc sản, đồ thủ công mỹ nghệ.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Khách sạn nào tốt ở Đà Lạt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tùy ngân sách có thể chọn: Khách sạn 5 sao (Dalat Palace, Ana Mandara), homestay (Mộng Mơ, The Secret Garden), hoặc khách sạn bình dân (Hoàng Lan, Ngọc Lan).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title text-center">Liên hệ & Hỗ trợ</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Thông tin liên hệ</h3>
+                        <ul>
+                            <li><i class="fas fa-phone"></i> Hotline: 1900 1234</li>
+                            <li><i class="fas fa-envelope"></i> Email: info@dalattravel.vn</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 123 Trần Hưng Đạo, Đà Lạt</li>
+                        </ul>
+                        
+                        <h3>Giờ làm việc</h3>
+                        <ul>
+                            <li>Thứ 2 - Thứ 6: 8:00 - 17:00</li>
+                            <li>Thứ 7: 8:00 - 12:00</li>
+                            <li>Chủ nhật: Nghỉ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Gửi yêu cầu</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Họ tên *</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="tel" id="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Nội dung *</label>
+                                <textarea id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Gửi yêu cầu</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <iframe src="https://maps.google.com/maps?q=da+lat&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen aria-label="Bản đồ Đà Lạt"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Đăng ký nhận tin</h2>
+                <p>Nhận thông tin ưu đãi và các gợi ý du lịch Đà Lạt hấp dẫn qua email</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin du lịch Đà Lạt uy tín, cung cấp thông tin chính xác và hữu ích cho du khách.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="#destinations">Điểm du lịch</a></li>
+                        <li><a href="#cuisine">Ẩm thực</a></li>
+                        <li><a href="#tours">Đặt Tour</a></li>
+                        <li><a href="#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Dịch vụ</h3>
+                    <ul>
+                        <li><a href="#tours">Tour du lịch</a></li>
+                        <li><a href="#transportation">Thuê xe du lịch</a></li>
+                        <li><a href="#">Đặt phòng khách sạn</a></li>
+                        <li><a href="#">Hướng dẫn viên</a></li>
+                        <li><a href="#">Đặt bàn nhà hàng</a></li>
+                        <li><a href="#">Vé tham quan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn đặt tour</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatTravel. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Destination filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const destinationCards = document.querySelectorAll('.destination-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                
+                // Filter cards
+                destinationCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.filter.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Save destination
+        const saveBtns = document.querySelectorAll('.save-btn');
+
+        saveBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('saved');
+                btn.innerHTML = btn.classList.contains('saved') ? 
+                    '<i class="fas fa-heart"></i> Đã lưu' : '<i class="far fa-heart"></i> Lưu';
+            });
+        });
+
+        // Itinerary tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.dataset.tab;
+                
+                // Update active tab
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tabId) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>

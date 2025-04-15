@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá Dâu Tây Đà Lạt - Đặc sản nổi tiếng của thành phố ngàn hoa với hương vị thơm ngon độc đáo">
+    <title>Dâu Tây Đà Lạt | Đặc sản ẩm thực Đà Lạt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://maps.google.com">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Biến màu sắc - GIỮ NGUYÊN NHƯ FILE BÁNH CĂN */
+        :root {
+            --primary-color: #5a4fcf; /* Màu tím đặc trưng Đà Lạt */
+            --secondary-color: #ff6b6b; /* Màu cam nhạt */
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --white: #fff;
+            --black: #000;
+            --gray: #777;
+            --light-gray: #eee;
+        }
+
+        /* Global Styles */
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--secondary-color);
+        }
+
+        .breadcrumb span {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            margin: 0 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://storage.googleapis.com/onelife-public/blog.onelife.vn/2024/01/bc3a163d-dau-tay-da-lat.png') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* About Dish Section */
+        .about-dish {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .ingredient-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .ingredient-card:hover .ingredient-icon {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .ingredient-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        /* Recipe Section */
+        .recipe {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .recipe-steps {
+            background: var(--light-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            min-width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .step-content p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Places Section */
+        .places {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .place-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .place-img img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .place-card:hover .place-img img {
+            transform: scale(1.1);
+        }
+
+        .place-info {
+            padding: 20px;
+        }
+
+        .place-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .place-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .place-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .place-info p {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--white);
+            border: none;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--white);
+        }
+
+        .faq-answer.active {
+            padding: 15px 20px;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            line-height: 1.7;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 60px 0;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 0 25px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+                transition: all 0.5s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .newsletter-form button {
+                border-radius: 5px;
+                padding: 15px;
+            }
+
+            .step {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">Đà Lạt<span>Travel</span></a>
+                <ul class="nav-links">
+                    <li><a href="../BTL.html">Trang chủ</a></li>
+                    <li><a href="../BTL.html#about">Giới thiệu</a></li>
+                    <li><a href="../BTL.html#destinations">Điểm đến</a></li>
+                    <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                    <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                    <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    <li><a href="../BTL.html#itinerary">Lịch trình</a></li>
+                    <li><a href="../BTL.html#contact">Liên hệ</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Dâu Tây Đà Lạt</h1>
+                <p class="highlight">Đặc sản nông sản • Giá từ 50.000 - 150.000đ/kg</p>
+                <p>Dâu tây Đà Lạt nổi tiếng với vị ngọt thanh, thơm mát và nhiều dưỡng chất tốt cho sức khỏe</p>
+                
+                <div class="hero-btns">
+                    <a href="#recipe" class="btn">
+                        <i class="fas fa-utensils"></i> Cách thưởng thức
+                    </a>
+                    <a href="#places" class="btn">
+                        <i class="fas fa-map-marker-alt"></i> Vườn dâu ngon
+                    </a>
+                    <a href="#gallery" class="btn btn-secondary">
+                        <i class="fas fa-images"></i> Hình ảnh
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Dish Section -->
+        <section class="about-dish" id="about">
+            <div class="container">
+                <h2 class="section-title text-center">Giới thiệu Dâu Tây Đà Lạt</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Dâu tây Đà Lạt là một trong những đặc sản nổi tiếng nhất của thành phố ngàn hoa. Nhờ khí hậu mát mẻ quanh năm, thổ nhưỡng phù hợp, dâu tây Đà Lạt có hương vị thơm ngon đặc trưng, khác biệt so với dâu tây trồng ở các vùng khác.</p>
+                        <p>Dâu tây Đà Lạt có nhiều giống khác nhau như dâu New Zealand, dâu Mỹ, dâu Nhật, mỗi loại có đặc điểm riêng về hình dáng, màu sắc và hương vị. Dâu thường chín vào mùa đông và đầu xuân, từ tháng 11 đến tháng 4 năm sau. Dâu tây Đà Lạt không chỉ được thưởng thức tươi mà còn được chế biến thành nhiều món ăn, thức uống hấp dẫn như mứt, sinh tố, kem, bánh...</p>
+                        <p>Đặc điểm nổi bật của dâu tây Đà Lạt là quả chắc, vị ngọt thanh, thơm mát, ít chua và giàu dinh dưỡng. Dâu tây chứa nhiều vitamin C, chất xơ và các chất chống oxy hóa tốt cho sức khỏe.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://cdn.vntour.com.vn/storage/media/img/2018/11/01/dau-tay_1541040627.jpg" alt="Dâu tây Đà Lạt" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ingredients Section -->
+        <section class="ingredients" id="ingredients">
+            <div class="container">
+                <h2 class="section-title text-center">Đặc điểm nổi bật</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những yếu tố tạo nên chất lượng đặc biệt của Dâu Tây Đà Lạt</p>
+                
+                <div class="ingredients-grid">
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h3>Khí hậu</h3>
+                        <p>Khí hậu mát mẻ quanh năm, nhiệt độ lý tưởng 15-25°C giúp dâu phát triển tốt</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Giống dâu</h3>
+                        <p>Nhiều giống dâu chất lượng cao nhập từ New Zealand, Nhật Bản, Mỹ</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3>Thổ nhưỡng</h3>
+                        <p>Đất đỏ bazan giàu dinh dưỡng, nguồn nước sạch từ núi cao</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Canh tác</h3>
+                        <p>Áp dụng công nghệ cao, hạn chế thuốc trừ sâu, thu hoạch thủ công</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Dinh dưỡng</h3>
+                        <p>Giàu vitamin C, chất xơ, chất chống oxy hóa tốt cho sức khỏe</p>
+                    </div>
+                    <div class="ingredient-card">
+                        <div class="ingredient-icon">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <h3>Chế biến</h3>
+                        <p>Đa dạng sản phẩm từ tươi, mứt, sinh tố đến rượu vang dâu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Section -->
+        <section class="recipe" id="recipe">
+            <div class="container">
+                <h2 class="section-title text-center">Cách thưởng thức Dâu Tây</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Hướng dẫn cách chọn và thưởng thức dâu tây Đà Lạt ngon nhất</p>
+                
+                <div class="recipe-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Chọn dâu ngon</h4>
+                            <p>Chọn quả có màu đỏ tươi đều, cuốn còn tươi xanh, không dập nát. Dâu chín tự nhiên thường có mùi thơm đặc trưng. Tránh chọn quả quá lớn hoặc có đốm trắng vì có thể chứa nhiều hóa chất.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Bảo quản đúng cách</h4>
+                            <p>Rửa nhẹ dâu dưới vòi nước chảy, để ráo. Bảo quản trong ngăn mát tủ lạnh, không đậy kín để tránh ẩm mốc. Nên ăn trong vòng 2-3 ngày sau khi mua để đảm bảo độ tươi ngon.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Ăn tươi</h4>
+                            <p>Dâu tây Đà Lạt ngon nhất khi ăn tươi, có thể chấm với sữa đặc, sữa chua hoặc đường. Nên ăn cả quả để giữ nguyên hương vị. Có thể cắt lát mỏng ăn kèm salad hoặc bánh ngọt.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Làm sinh tố</h4>
+                            <p>Xay dâu tây với sữa tươi, sữa chua và đá viên thành sinh tố mát lạnh. Có thể kết hợp với chuối, xoài hoặc kiwi để tăng hương vị. Thêm chút mật ong nếu thích ngọt hơn.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Làm mứt</h4>
+                            <p>Cắt nhỏ dâu tây, nấu với đường theo tỉ lệ 1:1, thêm chút nước cốt chanh. Đun nhỏ lửa đến khi hỗn hợp sánh lại. Mứt dâu có thể dùng phết bánh mì, làm nhân bánh hoặc ăn kèm sữa chua.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>Chế biến món ăn</h4>
+                            <p>Dâu tây có thể dùng làm bánh cheesecake, bánh tart, kem dâu, salad trái cây hoặc ăn kèm với chocolate tan chảy. Cũng có thể ngâm rượu vang dâu thơm ngon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Places Section -->
+        <section class="places" id="places">
+            <div class="container">
+                <h2 class="section-title text-center">Vườn dâu ngon nhất</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những vườn dâu tây nổi tiếng tại Đà Lạt được du khách yêu thích</p>
+                
+                <div class="places-grid">
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://khachsandanang.shop/uploads/images/images/vuon-dau-da-lat.jpg" alt="Vườn dâu Đà Lạt Milk" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Vườn dâu Đà Lạt Milk</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Thôn Đa Thiện, xã Xuân Thọ</span>
+                                <span><i class="fas fa-clock"></i> 7:00 - 17:00</span>
+                            </div>
+                            <p>Vườn dâu công nghệ cao với giống dâu New Zealand ngon nhất. Du khách có thể tự tay hái dâu và thưởng thức tại vườn. Giá từ 100.000 - 150.000đ/kg.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://www.kkday.com/vi/blog/wp-content/uploads/large-870e6dc03535f171a1439022d7d0c8cf.jpg" alt="Vườn dâu Nhật Bản" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Vườn dâu Nhật Bản</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Đường Trại Mát</span>
+                                <span><i class="fas fa-clock"></i> 7:00 - 18:00</span>
+                            </div>
+                            <p>Chuyên trồng giống dâu Nhật Bản quả to, ngọt đậm. Có dịch vụ tham quan, chụp ảnh và mua sản phẩm từ dâu. Giá từ 120.000 - 180.000đ/kg.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="place-card">
+                        <div class="place-img">
+                            <img src="https://mytourcdn.com/upload_images/Image/Tuan%20NL/Vuon%20Dau%20Tay%20Da%20Lat/Vuon-dau-tay-Dalat---vuon-dau-treo.jpg" alt="Vườn dâu Hoa Sữa" loading="lazy">
+                        </div>
+                        <div class="place-info">
+                            <h3>Vườn dâu Hoa Sữa</h3>
+                            <div class="place-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Đường Tự Phước</span>
+                                <span><i class="fas fa-clock"></i> 7:00 - 17:30</span>
+                            </div>
+                            <p>Vườn dâu hữu cơ không sử dụng thuốc trừ sâu, an toàn cho sức khỏe. Có bán dâu tươi và các sản phẩm chế biến từ dâu. Giá từ 80.000 - 120.000đ/kg.</p>
+                            <a href="#" class="btn" style="width: 100%; text-align: center;">Xem bản đồ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title text-center">Thư viện ảnh</h2>
+                <p class="text-center" style="max-width: 800px; margin: 0 auto 30px;">Những hình ảnh đẹp về Dâu Tây Đà Lạt</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://static.vinwonders.com/production/dau-tay-da-lat-1.jpg" alt="Dâu tây Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://mia.vn/media/uploads/blog-du-lich/top-10-dia-chi-mua-dau-tay-ngon-nhat-da-lat-cover-1634698408.jpg" alt="Vườn dâu tây" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://dulichvn.org.vn/nhaptin/uploads/images/khamphavuondautaydalat.jpg" alt="Dâu tây chín mọng" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://bizweb.dktcdn.net/100/507/723/files/dac-san-dau-tay-da-lat.jpg?v=1705463127490" alt="Thu hoạch dâu tây" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://hoaquanhapkhau.net/wp-content/uploads/2021/12/259978192_1553584258330265_9021736476278388141_n.jpg" alt="Dâu tây Đà Lạt" loading="lazy">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://storage.googleapis.com/cdn_dlhf_vn/public/products/S010/S0100100/z3959282133574_2d6d3d1ba146514433b0da5602752dfa_800x800.jpg" alt="Sản phẩm từ dâu tây" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title text-center">Câu hỏi thường gặp</h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Dâu tây Đà Lạt có gì khác biệt?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dâu tây Đà Lạt có vị ngọt thanh, thơm mát đặc trưng nhờ khí hậu mát mẻ và thổ nhưỡng phù hợp. Quả thường chắc, màu đỏ tươi, ít chua hơn so với dâu trồng ở vùng khác. Dâu Đà Lạt cũng được canh tác theo công nghệ cao, hạn chế thuốc trừ sâu.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Mùa dâu tây Đà Lạt là khi nào?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Mùa dâu tây Đà Lạt thường bắt đầu từ tháng 11 đến tháng 4 năm sau, đỉnh điểm vào tháng 12 đến tháng 2. Đây là thời điểm dâu chín rộ, chất lượng ngon nhất và giá cũng tốt nhất. Ngoài mùa này vẫn có dâu nhưng số lượng ít hơn.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Giá dâu tây khoảng bao nhiêu?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Giá dao động từ 50.000 - 150.000đ/kg tùy loại và thời điểm. Dâu Nhật, dâu New Zealand thường đắt hơn dâu thường. Giá cao nhất vào đầu và cuối mùa, giữa mùa giá thường tốt hơn. Dâu tự hái tại vườn thường đắt hơn dâu mua sẵn.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Có thể mua dâu tây về làm quà không?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Có thể mua dâu tươi về làm quà nhưng cần bảo quản lạnh trong quá trình vận chuyển. Nên chọn quả còn cứng, chưa chín quá. Ngoài ra, có thể mua các sản phẩm chế biến từ dâu như mứt, rượu, kẹo... để làm quà, dễ bảo quản và vận chuyển hơn.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ăn dâu tây có tốt cho sức khỏe không?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dâu tây rất tốt cho sức khỏe, giàu vitamin C (hơn cả cam), chất xơ và các chất chống oxy hóa. Dâu tây giúp tăng cường miễn dịch, tốt cho tim mạch, làm đẹp da và hỗ trợ giảm cân. Tuy nhiên người bị dị ứng hoặc dạ dày nhạy cảm nên ăn lượng vừa phải.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Đăng ký nhận tin</h2>
+                <p>Nhận thông tin về các đặc sản Đà Lạt và ưu đãi du lịch hấp dẫn qua email</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Về chúng tôi</h3>
+                    <p>DalatTravel là trang thông tin về Đà Lạt uy tín, giới thiệu các đặc sản và địa chỉ du lịch chất lượng.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-weixin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="../BTL.html">Trang chủ</a></li>
+                        <li><a href="../BTL.html#about">Giới thiệu Đà Lạt</a></li>
+                        <li><a href="../BTL.html#destinations">Điểm du lịch</a></li>
+                        <li><a href="../BTL.html#cuisine" class="active">Ẩm thực</a></li>
+                        <li><a href="../BTL.html#tours">Đặt Tour</a></li>
+                        <li><a href="../BTL.html#transportation">Di chuyển</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Đặc sản Đà Lạt</h3>
+                    <ul>
+                        <li><a href="#">Bánh ướt lòng gà</a></li>
+                        <li><a href="#">Bánh căn</a></li>
+                        <li><a href="#">Bánh tráng nướng</a></li>
+                        <li><a href="#">Kem bơ</a></li>
+                        <li><a href="#">Atiso</a></li>
+                        <li><a href="#">Rượu vang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Liên hệ hợp tác</a></li>
+                        <li><a href="#">Góp ý dịch vụ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DalatFood. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            // Browser supports lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                if (img.dataset.src) {
+                img.src = img.dataset.src;
+                }
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(img => {
+                observer.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
